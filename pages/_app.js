@@ -20,10 +20,10 @@ export default function App({ Component, pageProps }) {
       {/* Link  */}
     </Head>
     
-    <Script
+    {/* <Script
       id="bootstrap-cdn"
 src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" />
-  <Script src="https://kit.fontawesome.com/a54f1db03d.js" crossOrigin="anonymous" />
+  <Script src="https://kit.fontawesome.com/a54f1db03d.js" crossOrigin="anonymous" /> */}
     <Component {...pageProps} />
   </>
 }
