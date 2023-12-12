@@ -1,0 +1,55 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+a {
+  text-decoration: none;
+} 
+ul, li {
+  text-decoration: none;
+}
+
+/* ==================== Fonts CSS Style ============================
+====================================================================*/
+/* ==================== Color CSS Style ============================
+====================================================================*/
+/* ==================== Button CSS Style ============================
+====================================================================*/
+/* ==================== Section CSS Style ============================
+====================================================================*/
+
+/* ================ Responsive Design CSS Style ====================
+====================================================================*/
+
+/* Extra large devices (extra large desktops) */
+@media (min-width: 1200px) {
+  
+}
+
+/* Large devices (large desktops) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  
+}
+
+/* Medium devices (laptops, desktops) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+}
+
+/* Small devices (tablets) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 575.98px) {
+  
+}
+
+
+
+
+
+
+
