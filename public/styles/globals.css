@@ -13,55 +13,94 @@ ul, li {
 
 /* ==================== Fonts CSS Style ============================
 ====================================================================*/
+.nameFont {
+  color: #FFF;
+  text-align: right;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 72.887px;
+}
+.designationFont {
+  color: #FFF;
+  text-align: right;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.8px;
+}
+.mailFont {
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28.8px;
+}
+.locationFont {
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28.8px;
+}
 /* ==================== Color CSS Style ============================
 ====================================================================*/
 /* ==================== Button CSS Style ============================
 ====================================================================*/
+.hireButton {
+  border-radius: 40px;
+  background: #661CB0;
+  padding: 10px 60px;
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27.2px; /* 170% */
+  text-transform: uppercase;
+  border: none;
+}
 /* ==================== Section CSS Style ============================
 ====================================================================*/
-/*=======================Header Section ===========================*/
+/*======================= Header Section ===========================*/
 
-.navbar {
-  padding: 15px;
+.nav-item {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0px 20px;
+  text-align: center;
+}
+.nav-link {
+  color: white;
+}
+/*======================= Name Card Section ===========================*/
+
+.leftCard {
+  max-width: 400px;
+  height: 765px;
+  border-radius: 30px;
+  border: 1px solid #565656;
+}
+.profilePhoto {
+  text-align: center;
+  background: white;
+  border-radius: 30px;
   display: flex;
-  justify-content: space-between;
+  width: 298px;
+  height: 251.91px;
+  padding: 30.41px 53px 29.5px 53px;
+  justify-content: center;
   align-items: center;
 }
+.socialIcon {
+  color: #999;
+  font-size: 16px;
+  line-height: 20px;
+  border: 1px solid #999;
+  border-radius: 100%;
+  padding: 10px;
 
-.navbar-logo {
-  width: 50px;
-  height: auto;
-}
-
-.navbar-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.navbar-menu li {
-  margin-right: 15px;
-}
-
-.navbar-menu a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-
-.navbar-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px 0;
-  transition: 0.4s;
 }
 /* ================ Responsive Design CSS Style ====================
 ====================================================================*/
@@ -83,34 +122,7 @@ ul, li {
 
 /* Small devices (tablets) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: #333;
-  }
-
-  .navbar-menu.show {
-    display: flex;
-  }
-
-  .navbar-menu li {
-    margin: 0;
-    margin-bottom: 10px;
-  }
-
-  .navbar-toggle {
-    display: flex;
-  }
+ 
 }
 
 /* Extra small devices (phones) */
