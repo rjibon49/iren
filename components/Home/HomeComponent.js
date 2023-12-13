@@ -1,15 +1,35 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import photo from "../../public/images/content/irenAkterRone.png";
 import { faDribbble, faFacebook, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 const HomeComponent = () => {
+        const [count, setCount] = useState(0);
+      
+        useEffect(() => {
+            const intervalId = setInterval(() => {
+              setCount((prevCount) => {
+                if (prevCount < 35) {
+                  return prevCount + 1;
+                } else {
+                  clearInterval(intervalId);
+                  return prevCount;
+                }
+              });
+            }, 100);
+        
+            // Cleanup function to clear the interval when the component unmounts
+            return () => clearInterval(intervalId);
+          }, []);
+
     return (
         <>
-            <div className='container'>
+            <div className='container compoHeightLearge'>
                 <div className='row'>
-                    <div className='col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12'>
+                    <div className='col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12'>
                         <div className=''>
                             <div className='leftCard p-5'>
                                 <div className='d-flex justify-content-between align-items-center flex-wrap mb-3'>
@@ -36,8 +56,41 @@ const HomeComponent = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12'>
-
+                    <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
+                        <div>
+                            <div className='mb-5'>
+                                <span className='sectionTitleFont'><FontAwesomeIcon icon={faHome} className='me-4' />introduction</span>
+                            </div>
+                            <div className=''>
+                                <h1 className='introFontTitle mb-5'>Hi from <span className='colorText'>IREN</span>, <br />UX Researcher and <br />Designer</h1>
+                                <p className='introSubTitle mb-5'>I focus on making digital experiences smooth and easy by studying what users need and coming up with creative design ideas.</p>
+                            </div>
+                            <div className='d-flex justify-content-between'>
+                                <div className='w-50'>
+                                    <div className='mb-5 pb-5'>
+                                        <Link href="#"><a className='font16 resumeBtn'>MY RESUME</a></Link>
+                                    </div>
+                                    <div className='d-flex justify-content-between'>
+                                        <div className=''>
+                                            <p className='font72 colorText mb-5'>1+</p>
+                                            <p className='designationFont'>Years of <br />Experience</p>
+                                        </div>
+                                        <div>
+                                            <p className='font72 colorText mb-5'>{count}+</p>
+                                            <p className='designationFont'>projects completed <br /> on 16 countries</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="subscribe-button">
+                                        <span class="icon">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </span>
+                                        <span class="text">Subscribe Me</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

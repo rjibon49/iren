@@ -10,12 +10,30 @@ a {
 ul, li {
   text-decoration: none;
 }
+.compoHeightLearge {
+  height: 1080px;
+}
 
 /* ==================== Fonts CSS Style ============================
 ====================================================================*/
+.introFontTitle {
+  color: #FFF;
+  font-size: 78px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 90px; /* 115.385% */
+  letter-spacing: -0.2px;
+}
+.introSubTitle {
+  color: #999;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27.2px; /* 170% */
+  width: 526px;
+}
 .nameFont {
   color: #FFF;
-  text-align: right;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -23,7 +41,6 @@ ul, li {
 }
 .designationFont {
   color: #FFF;
-  text-align: right;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -43,8 +60,38 @@ ul, li {
   font-weight: 300;
   line-height: 28.8px;
 }
+.sectionTitleFont {
+  color: #FFF;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 14.4px; /* 120% */
+  text-transform: uppercase;
+  padding: 9.3px 20.692px 10.7px 21px;
+  border-radius: 30px;
+  border: 1px solid #565656;
+  opacity: 0.8531;
+}
+.font16 {
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27.2px; /* 170% */
+}
+.font72 {
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 56px; /* 77.778% */
+  letter-spacing: -0.2px;
+}
 /* ==================== Color CSS Style ============================
 ====================================================================*/
+.colorText {
+  color: #FF693B;
+}
 /* ==================== Button CSS Style ============================
 ====================================================================*/
 .hireButton {
@@ -59,6 +106,37 @@ ul, li {
   line-height: 27.2px; /* 170% */
   text-transform: uppercase;
   border: none;
+}
+.resumeBtn {
+  border-radius: 30px;
+  border: 1px solid #868686;
+  padding: 15px 100px;
+}
+
+.subscribe-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #673AB7;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  /* animation: spin 5s infinite linear; */
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 /* ==================== Section CSS Style ============================
 ====================================================================*/
