@@ -10,8 +10,24 @@ a {
 ul, li {
   text-decoration: none;
 }
-.compoHeightLearge {
-  height: 1080px;
+.compoHeightLarge {
+  min-height: 950px;
+}
+.aboutHeight {
+  min-height: 705px;
+}
+.certificateHeight {
+  min-height: 725px;
+}
+.educationHeight {
+  min-height: 1450px;
+}
+.alignCenter {
+  display: flex;
+  align-items: center;
+}
+.introSubWidth {
+  max-width: 526px;
 }
 
 /* ==================== Fonts CSS Style ============================
@@ -24,13 +40,27 @@ ul, li {
   line-height: 90px; /* 115.385% */
   letter-spacing: -0.2px;
 }
-.introSubTitle {
-  color: #999;
-  font-size: 16px;
+.font72 {
+  font-size: 72px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 27.2px; /* 170% */
-  width: 526px;
+  font-weight: 300;
+  line-height: 56px; /* 77.778% */
+  letter-spacing: -0.2px;
+}
+.font48 {
+  color: #FFF;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 60px;
+}
+.font48Color {
+  opacity: 0.7752;
+  color: #FF693B;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 60px;
 }
 .nameFont {
   color: #FFF;
@@ -39,14 +69,7 @@ ul, li {
   font-weight: 700;
   line-height: 72.887px;
 }
-.designationFont {
-  color: #FFF;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 23.8px;
-}
-.mailFont {
+.font24White {
   color: #FFF;
   font-size: 24px;
   font-style: normal;
@@ -60,6 +83,34 @@ ul, li {
   font-weight: 300;
   line-height: 28.8px;
 }
+.font16 {
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27.2px; /* 170% */
+}
+.font16c999 {
+  color: #999;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27.2px; /* 170% */
+}
+.designationFont {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.8px;
+}
+.font13c999 {
+  color: #999;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22.1px; /* 170% */
+}
 .sectionTitleFont {
   color: #FFF;
   font-size: 12px;
@@ -72,21 +123,7 @@ ul, li {
   border: 1px solid #565656;
   opacity: 0.8531;
 }
-.font16 {
-  color: #FFF;
-  text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 27.2px; /* 170% */
-}
-.font72 {
-  font-size: 72px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 56px; /* 77.778% */
-  letter-spacing: -0.2px;
-}
+
 /* ==================== Color CSS Style ============================
 ====================================================================*/
 .colorText {
@@ -150,7 +187,57 @@ ul, li {
   text-align: center;
 }
 .nav-link {
-  color: white;
+  color: white !important;
+  cursor: pointer;
+}
+/*===================== Background Logo Section =========================*/
+.backgroundLogo {
+  background-image: url("/images/content/backgroundLogo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50%;
+}
+/*======================= Name Card Section ===========================*/
+/* styles.css */
+.timeline-container {
+  position: relative;
+  margin-left: 0px; /* Adjust the left margin based on your design */
+}
+
+.timeline-event {
+  position: relative;
+  padding: 20px 0px 0px 20px;
+  border-left: 2px solid #333;
+  opacity: 0.7752;
+  margin-top: -20px;
+}
+
+.timeline-date {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333; /* Adjust the color of the date */
+}
+
+.timeline-content {
+  margin-left: 20px; /* Adjust the left margin for the event content */
+}
+
+/* Additional styling for better visuals */
+.timeline-event:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-event:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.7752;
+  background: #661CB0;
+  border: 2px solid #333;
+  border-radius: 50%;
 }
 /*======================= Name Card Section ===========================*/
 
@@ -207,10 +294,3 @@ ul, li {
 @media (max-width: 575.98px) {
   
 }
-
-
-
-
-
-
-
