@@ -22,6 +22,12 @@ ul, li {
 .educationHeight {
   min-height: 1450px;
 }
+.serviceHeight {
+  min-height: 1020px;
+}
+.skillsHeight {
+  min-height: 960px;
+}
 .alignCenter {
   display: flex;
   align-items: center;
@@ -104,6 +110,13 @@ ul, li {
   font-weight: 400;
   line-height: 23.8px;
 }
+.font24c999 {
+  color: #999;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
 .font13c999 {
   color: #999;
   font-size: 13px;
@@ -129,6 +142,7 @@ ul, li {
 .colorText {
   color: #FF693B;
 }
+
 /* ==================== Button CSS Style ============================
 ====================================================================*/
 .hireButton {
@@ -208,7 +222,6 @@ ul, li {
   position: relative;
   padding: 20px 0px 0px 20px;
   border-left: 2px solid #333;
-  opacity: 0.7752;
   margin-top: -20px;
 }
 
@@ -230,12 +243,12 @@ ul, li {
 .timeline-event:before {
   content: '';
   position: absolute;
-  top: 0px;
-  left: -10px;
+  top: -5px;
+  left: -11px;
   width: 20px;
   height: 20px;
-  opacity: 0.7752;
-  background: #661CB0;
+  /* opacity: 0.7752; */
+  background: #551C8F;
   border: 2px solid #333;
   border-radius: 50%;
 }
@@ -266,6 +279,44 @@ ul, li {
   border-radius: 100%;
   padding: 10px;
 
+}
+/* ====================== Sevice Section ====================== */
+.serviceBody {
+  border-radius: 20px;
+  border: 1px solid #565656;
+  opacity: 0.7752;
+  padding: 50px;
+  margin-bottom: 15px;
+}
+/* ====================== Skills Section ====================== */
+.skillsBorder {
+  border-radius: 85px;
+  border: 2px solid #565656;
+  opacity: 0.7752;
+  animation: borderMove 2s linear;
+  padding: 50px;
+}
+.counterContainer {
+  position: relative;
+}
+
+.counter {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 36px;
+  /* position: absolute;
+  width: 10%;
+  height: 10%; */
+  color: #FD683B;
+  align-items: center;
+  justify-content: center;
+   /* Use the same duration as animationDuration in JavaScript */
+}
+
+@keyframes borderMove {
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
 /* ================ Responsive Design CSS Style ====================
 ====================================================================*/

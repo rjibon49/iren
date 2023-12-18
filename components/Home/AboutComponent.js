@@ -1,17 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import Link from 'next/link';
-// import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 
 const AboutComponent = () => {
     return (
         <>
             <div className='container aboutHeight alignCenter' id='about'>
-                <div className='row w-100'>
-                    <div className='col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12'>
-
-                    </div>
+                <div className='row w-100 justify-content-end'>
                     <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
                         <div>
                             <div className='mb-5'>

@@ -17,6 +17,18 @@ const Header = () => {
           smooth: true,
         });
       };
+    const scrollToService = () => {
+        scroll.scrollTo('#service', {
+          duration: 500,
+          smooth: true,
+        });
+      };
+    const scrollToSkills= () => {
+        scroll.scrollTo('#skills', {
+          duration: 500,
+          smooth: true,
+        });
+      };
     return (
         <div>
             <nav className="navbar navbar-expand-lg sticky-top navbar-dark" >
@@ -45,7 +57,7 @@ const Header = () => {
                                 </ScrollLink>
                             </li>
                             <li className="nav-item">
-                                {/* <Link href="#service"><a className="nav-link " aria-current="page" >Service</a></Link> */}
+                                {/* <Link href="#resume"><a className="nav-link " aria-current="page" >Resume</a></Link> */}
                                 <ScrollLink
                                     to="resume"
                                     spy={true}
@@ -59,7 +71,32 @@ const Header = () => {
                                 </ScrollLink>
                             </li>
                             <li className="nav-item">
-                                <Link href="#skills"><a className="nav-link " aria-current="page" >Skills</a></Link>
+                                {/* <Link href="#service"><a className="nav-link " aria-current="page" >Service</a></Link> */}
+                                <ScrollLink
+                                    to="service"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    className="nav-link"
+                                    onClick={scrollToService}
+                                    >
+                                    Service
+                                </ScrollLink>
+                            </li>
+                            <li className="nav-item">
+                                {/* <Link href="#skills"><a className="nav-link " aria-current="page" >Skills</a></Link> */}
+                                <ScrollLink
+                                    to="skills"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    className="nav-link"
+                                    onClick={scrollToSkills}
+                                    >
+                                    Skills
+                                </ScrollLink>
                             </li>
                             <li className="nav-item">
                                 <Link href="#portfolio"><a className="nav-link " aria-current="page" >Portfolios</a></Link>
