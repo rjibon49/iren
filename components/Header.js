@@ -29,6 +29,12 @@ const Header = () => {
           smooth: true,
         });
       };
+    const scrollToPortfolio= () => {
+        scroll.scrollTo('#portfolio', {
+          duration: 500,
+          smooth: true,
+        });
+      };
     return (
         <div>
             <nav className="navbar navbar-expand-lg sticky-top navbar-dark" >
@@ -99,7 +105,18 @@ const Header = () => {
                                 </ScrollLink>
                             </li>
                             <li className="nav-item">
-                                <Link href="#portfolio"><a className="nav-link " aria-current="page" >Portfolios</a></Link>
+                                {/* <Link href="#portfolio"><a className="nav-link " aria-current="page" >Portfolios</a></Link> */}
+                                <ScrollLink
+                                    to="portfolio"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    className="nav-link"
+                                    onClick={scrollToPortfolio}
+                                    >
+                                    Portfolios
+                                </ScrollLink>
                             </li>
                             <li className="nav-item">
                                 <Link href="#testimoial"><a className="nav-link " aria-current="page" >Testimonial</a></Link>

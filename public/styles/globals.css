@@ -28,6 +28,9 @@ ul, li {
 .skillsHeight {
   min-height: 960px;
 }
+.portfolioHeight {
+  min-height: 1310px;
+}
 .alignCenter {
   display: flex;
   align-items: center;
@@ -85,6 +88,13 @@ ul, li {
 .locationFont {
   color: #FFF;
   font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28.8px;
+}
+.font20White {
+  color: #FFF;
+  font-size: 20px;
   font-style: normal;
   font-weight: 300;
   line-height: 28.8px;
@@ -317,6 +327,10 @@ ul, li {
   to {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
+}
+
+.portfolioContentWidth {
+  width: 31%;
 }
 /* ================ Responsive Design CSS Style ====================
 ====================================================================*/

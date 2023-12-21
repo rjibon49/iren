@@ -10,72 +10,7 @@ import premierepro from "../../public/images/content/adobePremierePro.png";
 import SkillCounter from './Misc/SkillCounter';
 
 const SkillsComponent = () => {
-// const [percentage, setPercentage] = useState(0);
-
-//   useEffect(() => {
-//     const targetPercentage = 95;
-//     const animationDuration = 2000; // in milliseconds
-
-//     const startTime = Date.now();
-
-//     const updateAnimation = () => {
-//       const currentTime = Date.now();
-//       const elapsed = currentTime - startTime;
-
-//       // Calculate the percentage based on the elapsed time
-//       const newPercentage = (elapsed / animationDuration) * targetPercentage;
-
-//       // If the new percentage exceeds the target, set it to the target
-//       setPercentage(newPercentage > targetPercentage ? targetPercentage : newPercentage);
-
-//       // If the animation is still in progress, request the next frame
-//       if (newPercentage < targetPercentage) {
-//         requestAnimationFrame(updateAnimation);
-//       }
-//     };
-
-//     // Start the animation
-//     requestAnimationFrame(updateAnimation);
-
-//   }, []);
-// const [currentStep, setCurrentStep] = useState(0);
-//   const [percentage, setPercentage] = useState(0);
-
-//   const steps = useMemo(() => [95, 85, 80, 90, 75, 70], []); // Memoize the steps array
-//   const animationDuration = 2000; // in milliseconds
-
-//   useEffect(() => {
-//     const startTime = Date.now();
-
-//     const updateAnimation = () => {
-//       const currentTime = Date.now();
-//       const elapsed = currentTime - startTime;
-
-//       // Calculate the percentage based on the elapsed time
-//       const targetPercentage = steps[currentStep];
-//       const newPercentage = (elapsed / animationDuration) * targetPercentage;
-
-//       // If the new percentage exceeds the target, set it to the target
-//       setPercentage(newPercentage > targetPercentage ? targetPercentage : newPercentage);
-
-//       // If the animation is still in progress, request the next frame
-//       if (newPercentage < targetPercentage) {
-//         requestAnimationFrame(updateAnimation);
-//       } else {
-//         // Move to the next step
-//         setCurrentStep((prevStep) => prevStep + 1);
-
-//         // If there are more steps, start the next animation
-//         if (currentStep < steps.length - 1) {
-//           requestAnimationFrame(updateAnimation);
-//         }
-//       }
-//     };
-
-//     // Start the animation
-//     requestAnimationFrame(updateAnimation);
-
-//   }, [currentStep, steps]);
+    
 const plusValue1 = [5, 5];
 const plusValue2 = [15, 15];
 const plusValue3 = [10, 10];
@@ -121,11 +56,6 @@ const plusValue6 = [30, 30];
                                     <SkillCounter initialValue={70} imageSrc={premierepro} altText={"Premiere Pro Logo"} plusValue={plusValue6} />
                                     <p className='designationFont text-center mt-3'>Premiere Pro</p>
                                 </div>
-                                
-                                
-                                
-                                
-                                
                             </div>
                         </div>
                     </div>
@@ -136,21 +66,3 @@ const plusValue6 = [30, 30];
 };
 
 export default SkillsComponent;
-
-
-// <div className='skillsBorder'  style={{ clipPath: `polygon(0 0, ${percentage + 5}% 0, ${percentage + 5}% 100%, 0 100%)` }}>
-// <div className="counter text-center">
-//     <div className='mb-3'>
-//         <Image src={figma} alt='Figma Logo' className='' /> 
-//     </div>
-//     {Math.floor(percentage)}%
-// </div>
-// </div>
-// <div className='skillsBorder'  style={{ clipPath: `polygon(0 0, ${percentage + 5}% 0, ${percentage + 5}% 100%, 0 100%)` }}>
-// <div className="counter text-center">
-//     <div className='mb-3'>
-//         <Image src={framer} alt='Framer Logo' className='' /> 
-//     </div>
-//     {Math.floor(percentage)}%
-// </div>
-// </div>
