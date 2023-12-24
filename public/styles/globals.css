@@ -116,6 +116,13 @@ ul, li {
   font-weight: 300;
   line-height: 28.8px;
 }
+.font20E6 {
+  color: #E6E6E6;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28.8px;
+}
 .font18White {
   color: #FFF;
   font-size: 18px;
@@ -362,6 +369,28 @@ ul, li {
 
 .portfolioContentWidth {
   width: 31%;
+}
+/* ====================== Team Section ====================== */
+.teamBorder {
+  width: 320px;
+  height: 286px;
+  border-radius: 20px;
+  border: 1px solid #484848;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.teamImageBody {
+  width: 275px;
+  height: 250px;
+  border-radius: 20px;
+  background: #1E1E1E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.memberImage {
+  border-radius: 50% !important;
 }
 /* ================ Responsive Design CSS Style ====================
 ====================================================================*/
