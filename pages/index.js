@@ -9,6 +9,7 @@ import SkillsComponent from '../components/Home/SkillsComponent';
 import PortfolioComponent from '../components/Home/PortfolioComponent';
 import HourlyBooking from '../components/Home/HourlyBooking';
 import TeamComponent from '../components/Home/TeamComponent';
+import ContactComponent from '../components/Home/ContactComponent';
 
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         <PortfolioComponent />
         <HourlyBooking />
         <TeamComponent />
+        <ContactComponent />
       </Layout>
     </>
   )

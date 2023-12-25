@@ -29,7 +29,7 @@ const HomeComponent = () => {
         <>
             <div className='container compoHeightLarge backgroundLogo alignCenter'>
                 <div className='row w-100'>
-                    <div className='col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12'>
+                    <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12'>
                         <div className=''>
                             <div className='leftCard p-5'>
                                 <div className='d-flex justify-content-between align-items-center flex-wrap mb-3'>
@@ -56,7 +56,7 @@ const HomeComponent = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
+                    <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12 ms-auto'>
                         <div>
                             <div className='mb-5'>
                                 <span className='sectionTitleFont'><FontAwesomeIcon icon={faHome} className='me-4' />introduction</span>

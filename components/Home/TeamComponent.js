@@ -4,11 +4,15 @@ import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import mehrab from "../../public/images/content/mehrabHossain.png";
 import jibon from "../../public/images/content/raihanHossain.png";
+import srikanta from "../../public/images/content/srikanto.png";
+import shanto from "../../public/images/content/shantoIslam.png";
+import sohan from "../../public/images/content/sohanTalukdar.png";
+import jahidul from "../../public/images/content/jahidulHasan.png";
 
 const TeamComponent = () => {
     return (
         <>
-            <div className='container aboutHeight alignCenter' id=''>
+            <div className='container teamHeight alignCenter' id=''>
                 <div className='row w-100 justify-content-end'>
                     <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
                         <div>
@@ -36,6 +40,42 @@ const TeamComponent = () => {
                                         <Image src={jibon} alt='Raihan Hossain' className='memberImage' />
                                         <h4 className='font20E6'>Md. Raihan Hossain</h4>
                                         <p className='designationFont'>Front-end Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='teamBorder'>
+                                <div className='teamImageBody'>
+                                    <div className='text-center'>
+                                        <Image src={srikanta} alt='Shrikanta Mazumder' className='memberImage' />
+                                        <h4 className='font20E6'>Shrikanta Mazumder</h4>
+                                        <p className='designationFont'>Backend Engineer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='teamBorder'>
+                                <div className='teamImageBody'>
+                                    <div className='text-center'>
+                                        <Image src={shanto} alt='Shanto Islam Emon' className='memberImage' />
+                                        <h4 className='font20E6'>Shanto Islam Emon</h4>
+                                        <p className='designationFont'>Video Editor</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='teamBorder'>
+                                <div className='teamImageBody'>
+                                    <div className='text-center'>
+                                        <Image src={sohan} alt='Sohan Talukder' className='memberImage' />
+                                        <h4 className='font20E6'>Sohan Talukder</h4>
+                                        <p className='designationFont'>UI/UX Designer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='teamBorder'>
+                                <div className='teamImageBody'>
+                                    <div className='text-center'>
+                                        <Image src={jahidul} alt='Jahidul Hassan' className='memberImage' />
+                                        <h4 className='font20E6'>Jahidul Hassan</h4>
+                                        <p className='designationFont'>Graphic Designer</p>
                                     </div>
                                 </div>
                             </div>
