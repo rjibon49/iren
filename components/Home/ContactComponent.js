@@ -6,7 +6,7 @@ import { faAnglesUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 const ContactComponent = () => {
     return (
         <>
-            <div className='container contactHeight alignCenter' id='about'>
+            <div className='container contactHeight alignCenter' id='contact'>
                 <div className='row w-100 justify-content-end'>
                     <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
                         <div>

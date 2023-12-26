@@ -30,7 +30,7 @@ const HomeComponent = () => {
             <div className='container compoHeightLarge backgroundLogo alignCenter'>
                 <div className='row w-100'>
                     <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12'>
-                        <div className=''>
+                        <div className='profile'>
                             <div className='leftCard p-5'>
                                 <div className='d-flex justify-content-between align-items-center flex-wrap mb-3'>
                                     <p className='nameFont'>IREN</p>
@@ -86,7 +86,7 @@ const HomeComponent = () => {
                                         <span className="icon">
                                             <i className="fa fa-arrow-right"></i>
                                         </span>
-                                        <span className="text">Subscribe Me</span>
+                                        <span className="text">SUBSCRIBE ME . SUBSCRIBE ME .</span>
                                     </div>
                                 </div>
                             </div>

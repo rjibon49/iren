@@ -35,9 +35,15 @@ const Header = () => {
           smooth: true,
         });
       };
+    const scrollToContact= () => {
+        scroll.scrollTo('#contact', {
+          duration: 500,
+          smooth: true,
+        });
+      };
     return (
         <div>
-            <nav className="navbar navbar-expand-lg sticky-top navbar-dark" >
+            <nav className="navbar navbar-expand-lg fixed-top" style={{background:"#191919"}}>
                 <div className="container">
                     <Link href="#"><a className="navbar-brand"><Image src={logo} alt="visualsage-logo" className="navbar-logo" /></a></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -122,7 +128,18 @@ const Header = () => {
                                 <Link href="#testimoial"><a className="nav-link " aria-current="page" >Testimonial</a></Link>
                             </li>
                             <li className="nav-item">
-                                <Link href="#contact"><a className="nav-link " aria-current="page" >Contact</a></Link>
+                                {/* <Link href="#contact"><a className="nav-link " aria-current="page" >Contact</a></Link> */}
+                                <ScrollLink
+                                    to="contact"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    className="nav-link"
+                                    onClick={scrollToContact}
+                                    >
+                                    Contact
+                                </ScrollLink>
                             </li>
                         </ul>
                     </div>
