@@ -60,7 +60,7 @@ const plusValue6 = [30, 30];
                             <div className=''>
                                 <h1 className='font48 mb-5'>My <span className='colorText'>Advantages</span></h1>
                             </div>
-                            <div className='d-flex gap-5 justify-content-start flex-wrap' data-aos="zoom-in">
+                            <div className='d-flex gap-5 justify-content-start flex-wrap' >
                                 <div>
                                     <SkillCounter initialValue={95} imageSrc={figma} altText={"Figma Logo"} plusValue={plusValue1} />
                                     <p className='designationFont text-center mt-3'>Figma</p>

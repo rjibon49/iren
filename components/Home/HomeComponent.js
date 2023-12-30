@@ -65,14 +65,14 @@ const HomeComponent = () => {
                                     <a href='mailto:"iren@visualsage.xyz'> <h3 className='font24White'>iren@visualsage.xyz</h3></a>
                                     <h4 className='locationFont'>Bangladesh</h4>
                                 </div>
-                                <div className='d-flex align-items-center justify-content-around mb-5 w-100 m-0'>
+                                <div className='d-flex align-items-center justify-content-evenly mb-5 w-100 m-0'>
                                      <Link href="https://www.facebook.com/visualsage0"><a><FontAwesomeIcon icon={faFacebook} className='socialIcon' /></a></Link> 
                                      <Link href="https://twitter.com/irenaktar"><a><FontAwesomeIcon icon={faTwitter} className='socialIcon' /></a></Link> 
                                      <Link href="https://dribbble.com/irenaktar"><a><FontAwesomeIcon icon={faDribbble} className='socialIcon' /></a></Link> 
                                      <Link href="https://www.linkedin.com/in/irenaktar"><a><FontAwesomeIcon icon={faLinkedin} className='socialIcon' /></a></Link> 
                                      <Link href="https://www.instagram.com/visualsage0/"><a><FontAwesomeIcon icon={faInstagram} className='socialIcon' /></a></Link> 
-                                     <Link href="https://www.youtube.com/@visualsage0"><a><FontAwesomeIcon icon={faYoutube} className='socialIcon' /></a></Link> 
-                                     <Link href="https://medium.com/@irenaktar2"><a><FontAwesomeIcon icon={faMedium} className='socialIcon' /></a></Link> 
+                                     {/* <Link href="https://www.youtube.com/@visualsage0"><a><FontAwesomeIcon icon={faYoutube} className='socialIcon' /></a></Link>  */}
+                                     {/* <Link href="https://medium.com/@irenaktar2"><a><FontAwesomeIcon icon={faMedium} className='socialIcon' /></a></Link>  */}
                                 </div>
                                 <div className='text-center'>
                                     <Link href="https://www.upwork.com/freelancers/~013a1545ed7b7f3fad"><a><button className='hireButton'>HIRE ME!</button></a></Link>
@@ -96,7 +96,7 @@ const HomeComponent = () => {
                                     </div>
                                     <div className='d-flex justify-content-around'>
                                         <div className=''>
-                                            <p className='font72 colorText mb-5'>1+</p>
+                                            <p className='font72 colorText mb-5'>2+</p>
                                             <p className='designationFont'>Years of <br />Experience</p>
                                         </div>
                                         <div>

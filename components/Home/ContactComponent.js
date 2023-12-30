@@ -1,9 +1,41 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { sendContactForm } from '../../lib/api';
 
 const ContactComponent = () => {
+
+    const initlValues = {
+        name: "",
+        email: "",
+        number: "",
+        budget: "",
+        subject: "",
+        message: ""
+    }
+    const initState = {values: initlValues}
+
+    const [state, setState] = useState(initState);
+
+    const {values, isLoding} = state;
+
+    const handleChange = ({target}) => setState((prev) => ({
+        ...prev,
+        values: {
+            ...prev.values,
+            [target.name]: target.value
+        }
+    }))
+
+    const onSubmit = async () => {
+        setState((prev) => ({
+            ...prev,
+            isLoding: true
+        }));
+        await sendContactForm(values)
+    };
+
     return (
         <>
             <div className='container contactHeight alignCenter' id='contact'>
@@ -17,27 +49,27 @@ const ContactComponent = () => {
                                 <form className="row gap-5">
                                     <div className="col-md-5 form-group">
                                         <label for="inputName" className="form-label mb-2">FULL NAME <span className='colorText'>*</span></label>
-                                        <input type="text" required className="form-control" id="inputName" placeholder='Your Full Name' />
+                                        <input type="text" required className="form-control" id="inputName" placeholder='Your Full Name' value={values.name} name="name" onChange={handleChange} />
                                     </div>
                                     <div className="col-md-5 form-group">
                                         <label for="inputEmail4" className="form-label mb-2">EMAIL <span className='colorText'>*</span></label>
-                                        <input type="email" required className="form-control" id="inputEmail4" placeholder='Your Email Address' />
+                                        <input type="email" required className="form-control" id="inputEmail4" placeholder='Your Email Address' value={values.email} name="email" onChange={handleChange} />
                                     </div>
                                     <div className="col-md-5 form-group">
                                         <label for="inputPhone" className="form-label mb-2">PHOTNE <span className='colorText999'>(optional)</span></label>
-                                        <input type="text" className="form-control" id="inputPhone" placeholder='Your Phone Number' />
+                                        <input type="text" className="form-control" id="inputPhone" placeholder='Your Phone Number' value={values.number} name="number" onChange={handleChange} />
                                     </div>
                                     <div className="col-md-5 form-group">
                                         <label for="inputSubject" className="form-label mb-2">SUBJECT <span className='colorText'>*</span></label>
-                                        <input type="text" required className="form-control" id="inputSubject" placeholder='Select a subject' />
+                                        <input type="text" required className="form-control" id="inputSubject" placeholder='Select a subject' value={values.subject} name="subject" onChange={handleChange} />
                                     </div>
                                     <div className="col-md-5 form-group">
                                         <label for="inputBudget" className="form-label mb-2">BUDGET <span className='colorText999'>(optional)</span></label>
-                                        <input type="text" className="form-control" id="inputBudget" placeholder='A range budget for your project' />
+                                        <input type="text" className="form-control" id="inputBudget" placeholder='A range budget for your project' value={values.budget} name="budget" onChange={handleChange} />
                                     </div>
                                     <div className="col-md-9 messageForm form-group">
                                         <label for="inutMessage" className="form-label mb-2">MESSAGE</label>
-                                        <textarea className="form-control" id="inutMessage" rows="5"></textarea>
+                                        <textarea className="form-control" id="inutMessage" rows="5" value={values.message} name="message" onChange={handleChange}></textarea>
                                     </div>
                                     <div className='col-md-5 mb-3' form-group>
                                         <label className="custom-file-input d-flex align-items-center" for="attachment">
@@ -45,8 +77,8 @@ const ContactComponent = () => {
                                             <input type="file" id="attachment" name="attachment" />
                                         </label>
                                     </div>
-                                    <div class="col-12">
-                                        <button type="submit" className="btnMessage font12White">SEND MESSAGE</button>
+                                    <div className="col-12">
+                                        <button className="btnMessage font12White" onClick={onSubmit} isLoding={isLoding}>{" "}SEND MESSAGE</button>
                                     </div>
                                 </form>
                             </div>
@@ -59,3 +91,5 @@ const ContactComponent = () => {
 };
 
 export default ContactComponent;
+
+// disabled={!values.name || !values.email || values.subject || !values.message}

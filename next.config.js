@@ -1,14 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
-
-module.exports = nextConfig
+require('dotenv').config();
 
 module.exports = ({
   publicRuntimeConfig: {
-      APP_NAME: 'OASIS',
+      APP_NAME: 'Visualsage',
       API_DEVELOPMENT: 'http://localhost:5000/api',
       PRODUCTION: false
   },
@@ -16,4 +11,5 @@ module.exports = ({
 images: {
   domains: ["i.postimg.cc", "i.ibb.co", "lh3.googleusercontent.com"],
 },
+swcMinify: true,
 });
