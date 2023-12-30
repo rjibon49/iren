@@ -18,7 +18,7 @@ const Footer = () => {
                 </div>
                 <div className='d-flex justify-content-center'>
                     <div className='footerVideo'>
-                        <iframe className='videoIntro' src="https://www.youtube.com/embed/wkhVXxU-H9E?si=Pt1N4iJlvG8WCeeO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe className='videoIntro' src="https://www.youtube.com/embed/wkhVXxU-H9E?si=Pt1N4iJlvG8WCeeO" title="YouTube video player" frameorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </div>
                 </div>
             </div>

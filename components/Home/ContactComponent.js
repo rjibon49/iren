@@ -14,32 +14,32 @@ const ContactComponent = () => {
                                 <span className='sectionTitleFont'><FontAwesomeIcon icon={faEnvelope} className='me-4'/>CONTACT</span>
                             </div>
                             <div className=''>
-                                <form className="d-flex justify-content-between flex-wrap gap-4">
-                                    <div className="col-md-5">
+                                <form className="row gap-5">
+                                    <div className="col-md-5 form-group">
                                         <label for="inputName" className="form-label mb-2">FULL NAME <span className='colorText'>*</span></label>
                                         <input type="text" required className="form-control" id="inputName" placeholder='Your Full Name' />
                                     </div>
-                                    <div className="col-md-5">
+                                    <div className="col-md-5 form-group">
                                         <label for="inputEmail4" className="form-label mb-2">EMAIL <span className='colorText'>*</span></label>
                                         <input type="email" required className="form-control" id="inputEmail4" placeholder='Your Email Address' />
                                     </div>
-                                    <div className="col-md-5">
+                                    <div className="col-md-5 form-group">
                                         <label for="inputPhone" className="form-label mb-2">PHOTNE <span className='colorText999'>(optional)</span></label>
                                         <input type="text" className="form-control" id="inputPhone" placeholder='Your Phone Number' />
                                     </div>
-                                    <div className="col-md-5">
+                                    <div className="col-md-5 form-group">
                                         <label for="inputSubject" className="form-label mb-2">SUBJECT <span className='colorText'>*</span></label>
                                         <input type="text" required className="form-control" id="inputSubject" placeholder='Select a subject' />
                                     </div>
-                                    <div className="col-md-5">
+                                    <div className="col-md-5 form-group">
                                         <label for="inputBudget" className="form-label mb-2">BUDGET <span className='colorText999'>(optional)</span></label>
                                         <input type="text" className="form-control" id="inputBudget" placeholder='A range budget for your project' />
                                     </div>
-                                    <div className="col-md-9 messageForm">
+                                    <div className="col-md-9 messageForm form-group">
                                         <label for="inutMessage" className="form-label mb-2">MESSAGE</label>
                                         <textarea className="form-control" id="inutMessage" rows="5"></textarea>
                                     </div>
-                                    <div className='col-md-5 mb-3'>
+                                    <div className='col-md-5 mb-3' form-group>
                                         <label className="custom-file-input d-flex align-items-center" for="attachment">
                                             <FontAwesomeIcon icon={faAnglesUp} className='me-3 iconStyle'/> <span className='font12White'>ADD AN ATTACHMENT</span>
                                             <input type="file" id="attachment" name="attachment" />

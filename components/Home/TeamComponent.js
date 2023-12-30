@@ -20,8 +20,8 @@ const TeamComponent = () => {
                                 <span className='sectionTitleFont'><FontAwesomeIcon icon={faUsers} className='me-4'/>MY TEAM</span>
                             </div>
                             <div className=''>
-                                <h1 className='font48 mb-3'>Meet My Professional <span className='colorText'>Team</span></h1>
-                                <p className='font20White mb-5 pe-5'>Our guiding principle is straightforward: assemble a team of diverse and passionate individuals, cultivating a culture that empowers each member to deliver their utmost excellence in work.</p>
+                                <h1 className='font48 mb-4'>Meet My Professional <span className='colorText'>Team</span></h1>
+                                <p className='font20White'>Our guiding principle is straightforward: assemble a team of diverse and passionate individuals, cultivating a culture that empowers each member to deliver their utmost excellence in work.</p>
                             </div>
                         </div>
                         <div className='d-flex justify-content-center gap-4 flex-wrap'>

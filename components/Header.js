@@ -45,7 +45,7 @@ const Header = () => {
         <div>
             <nav className="navbar navbar-expand-lg fixed-top" style={{background:"#191919"}}>
                 <div className="container">
-                    <Link href="#"><a className="navbar-brand"><Image src={logo} alt="visualsage-logo" className="navbar-logo" /></a></Link>
+                    <Link href="/"><a className="navbar-brand"><Image src={logo} alt="visualsage-logo" className="navbar-logo" /></a></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
@@ -77,7 +77,7 @@ const Header = () => {
                                     offset={-70}
                                     duration={500}
                                     className="nav-link"
-                                    onClick={scrollToAbout}
+                                    onClick={scrollToResume}
                                     >
                                     Resume
                                 </ScrollLink>
@@ -124,9 +124,9 @@ const Header = () => {
                                     Portfolios
                                 </ScrollLink>
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link href="#testimoial"><a className="nav-link " aria-current="page" >Testimonial</a></Link>
-                            </li>
+                            </li> */}
                             <li className="nav-item">
                                 {/* <Link href="#contact"><a className="nav-link " aria-current="page" >Contact</a></Link> */}
                                 <ScrollLink

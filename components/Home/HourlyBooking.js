@@ -11,11 +11,11 @@ const HourlyBooking = () => {
                     <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
                         <div>
                             <div className=''>
-                                <h1 className='font48 mb-5'>Hourly <span className='font48Color'>Pricing</span></h1>\
+                                <h1 className='font48 mb-5'>Hourly <span className='colorText'>Pricing</span></h1>\
                             </div>
                         </div>
                         <div className='d-flex justify-content-between align-items-center flex-wrap gap-3'>
-                            <div className='hourlyWidth p-5'>
+                            <div className='hourlyWidth'>
                                 <div className='d-flex justify-content-between align-items-center flex-wrap'>
                                     <p className='font18White'>BASIC</p>
                                     <p className='font13White'>Need to redesign ? <br />or small budget</p>
@@ -36,7 +36,7 @@ const HourlyBooking = () => {
                                     <p className='designationFont'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Time to time update</p>
                                 </div>
                             </div>
-                            <div className='hourlyWidth p-5'>
+                            <div className='hourlyWidth'>
                                 <div className='d-flex justify-content-between align-items-center flex-wrap'>
                                     <p className='font18White'>BASIC</p>
                                     <p className='font13White'>Need to redesign ? <br />or small budget</p>

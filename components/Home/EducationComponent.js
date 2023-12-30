@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import TimeLine from './Misc/TimeLine';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import CertificateCompo from './Misc/CertificateCompo';
 
+
 const EducationComponent = () => {
+
     // const experience = [
     //     {
     //       date: '2022 - Present',

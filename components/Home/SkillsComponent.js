@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShapes } from '@fortawesome/free-solid-svg-icons';
 import figma from "../../public/images/content/figma.png";
@@ -10,6 +10,35 @@ import premierepro from "../../public/images/content/adobePremierePro.png";
 import SkillCounter from './Misc/SkillCounter';
 
 const SkillsComponent = () => {
+
+    const skillsRef = useRef(null);
+    const [inViewport, setInViewport] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setInViewport(true);
+        }
+      },
+      {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5, // Change this value based on your needs
+      }
+    );
+
+    if (skillsRef.current) {
+      observer.observe(skillsRef.current);
+    }
+
+    return () => {
+      if (skillsRef.current) {
+        observer.unobserve(skillsRef.current);
+      }
+    };
+  }, []);
     
 const plusValue1 = [5, 5];
 const plusValue2 = [15, 15];
@@ -21,7 +50,7 @@ const plusValue6 = [30, 30];
 
     return (
         <>
-            <div className='container skillsHeight alignCenter' id='skills'>
+            <div className='container skillsHeight alignCenter skillBackground' id='skills' ref={skillsRef}>
                 <div className='row w-100 justify-content-end'>
                     <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
                         <div>
@@ -29,9 +58,9 @@ const plusValue6 = [30, 30];
                                 <span className='sectionTitleFont'><FontAwesomeIcon icon={faShapes} className='me-4'/>MY SKILLS</span>
                             </div>
                             <div className=''>
-                                <h1 className='font48 mb-5'>My <span className='font48Color'>Advantages</span></h1>
+                                <h1 className='font48 mb-5'>My <span className='colorText'>Advantages</span></h1>
                             </div>
-                            <div className='d-flex gap-5 justify-content-start flex-wrap'>
+                            <div className='d-flex gap-5 justify-content-start flex-wrap' data-aos="zoom-in">
                                 <div>
                                     <SkillCounter initialValue={95} imageSrc={figma} altText={"Figma Logo"} plusValue={plusValue1} />
                                     <p className='designationFont text-center mt-3'>Figma</p>

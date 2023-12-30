@@ -18,7 +18,7 @@ const PortfolioComponent = () => {
                                 <span className='sectionTitleFont'><FontAwesomeIcon icon={faGripVertical} className='me-4'/>PORTFOLIO</span>
                             </div>
                             <div className=''>
-                                <h1 className='font48 mb-5'>Featured<span className='font48Color'> Projects</span></h1>
+                                <h1 className='font48 mb-5'>Featured<span className='colorText'> Projects</span></h1>
                             </div>
                             <div>
                                 <Image src={cafeCrave} alt='Cafe Crave Coffee Shop Case Study' className='' />

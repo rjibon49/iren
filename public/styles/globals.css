@@ -34,6 +34,9 @@ ul, li {
 .hourlyHeight {
   min-height: 1090px;
 }
+.calendlyHeight {
+  min-height: 750px;
+}
 .teamHeight {
   min-height: 1475px;
 }
@@ -50,19 +53,47 @@ ul, li {
 .introSubWidth {
   max-width: 526px;
 }
+.counterWidth {
+  width: 50%;
+}
 .hourlyWidth {
-  width: 350px;
+  width: 48%;
   min-height: 699px;
   border: 1px solid #484848;
   border-radius: 30px;
-  /* padding: 25px; */
+  padding: 35px;
+  margin-bottom: 30px;
 }
 .profile {
-  position: fixed;
-  width: 100%;
+  width: 30%;
   height: 100%;
   overflow-y: auto;
+  transition: top 0.3s; /* Optional: Add a smooth transition effect */
 }
+
+.fixed {
+  position: fixed;
+  top: 15%;
+}
+
+/* Rotate Text  */
+/* .subscribe-animation {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  position: relative;
+  animation: effect 8s linear infinite;
+  border-radius: 100%;
+}
+@keyframes effect {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
 
 /* ==================== Fonts CSS Style ============================
 ====================================================================*/
@@ -237,19 +268,7 @@ ul, li {
   padding: 15px 100px;
 }
 
-.subscribe-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #673AB7;
-  color: #fff;
-  font-size: 16px;
-  position: relative;
-  /* animation: spin 5s infinite linear; */
-}
+
 .btnMessage {
   border-radius: 32px;
   background: #35266E;
@@ -265,17 +284,6 @@ ul, li {
   color: var(--Gray-700, #344054);
   font-size: 16px;
   line-height: 24px;
-}
-.icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
 /* ==================== Section CSS Style ============================
 ====================================================================*/
@@ -298,6 +306,12 @@ ul, li {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50%;
+}
+.skillBackground {
+  background-image: url("/images/content/myAdvantage.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 }
 /*======================= Name Card Section ===========================*/
 /* styles.css */
@@ -344,18 +358,20 @@ ul, li {
 
 .leftCard {
   max-width: 400px;
-  height: 765px;
+  height: 720px;
   border-radius: 30px;
   border: 1px solid #565656;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .profilePhoto {
-  text-align: center;
   background: white;
   border-radius: 30px;
   display: flex;
   width: 298px;
   height: 251.91px;
-  padding: 30.41px 53px 29.5px 53px;
   justify-content: center;
   align-items: center;
 }
@@ -412,7 +428,7 @@ ul, li {
 }
 /* ====================== Team Section ====================== */
 .teamBorder {
-  width: 320px;
+  width: 47%;
   height: 286px;
   border-radius: 20px;
   border: 1px solid #484848;
@@ -421,8 +437,8 @@ ul, li {
   justify-content: center;
 }
 .teamImageBody {
-  width: 275px;
-  height: 250px;
+  width: 75%;
+  height: 220px;
   border-radius: 20px;
   background: #1E1E1E;
   display: flex;
@@ -511,6 +527,31 @@ ul, li {
   .footerVideo {
     width: 75%;
   }
+  .profile {
+    width: 35%;
+  }
+  .introFontTitle {
+    font-size: 58px;
+  }
+  .font48 {
+    font-size: 40px;
+  }
+  .resumeBtn {
+    padding: 15px 80px;
+  }
+  .portfolioContentWidth {
+    width: 46%;
+  }
+  .teamImageBody {
+    width: 90%;
+    height: 260px;
+  }
+  .hourlyWidth {
+    padding: 15px;
+  }
+  .counterWidth {
+    width: 50%;
+  }
 }
 
 /* Medium devices (laptops, desktops) */
@@ -520,6 +561,21 @@ ul, li {
   }
   .footerVideo {
     width: 100%;
+  }
+  .introFontTitle  {
+    font-size: 75px;
+  }
+  .fixed {
+    position: static;
+  }
+  .profile {
+    margin-bottom: 25px;
+  }
+  .portfolioContentWidth {
+    width: 30%;
+  }
+  .counterWidth {
+    width: 50%;
   }
 }
 
@@ -539,6 +595,49 @@ ul, li {
     width: 100%;
   }
   .footerVideo {
+    width: 100%;
+  }
+  .counterWidth {
+    width: 100%;
+  }
+  .introFontTitle  {
+    font-size: 42px;
+    line-height: 55px;
+  }
+  .font72 {
+    font-size: 40px;
+    line-height: 52px;
+  }
+  .font48  {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .font24White {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .fixed {
+    position: static;
+  }
+  .profile {
+    margin-bottom: 25px;
+  }
+  .resumeBtn {
+    padding: 15px 45px;
+  }
+  .serviceBody  {
+    padding: 15px;
+  }
+  .skillsBorder  {
+    padding: 45px;
+  }
+  .portfolioContentWidth {
+    width: 100%;
+  }
+  .hourlyWidth {
+    width: 100%;
+  }
+  .teamBorder {
     width: 100%;
   }
 }
