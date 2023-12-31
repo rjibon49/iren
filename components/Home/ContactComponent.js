@@ -18,7 +18,7 @@ const ContactComponent = () => {
 
     const [state, setState] = useState(initState);
 
-    const {values, isLoding} = state;
+    const {values, isLoding, error} = state;
 
     const handleChange = ({target}) => setState((prev) => ({
         ...prev,
@@ -33,7 +33,15 @@ const ContactComponent = () => {
             ...prev,
             isLoding: true
         }));
-        await sendContactForm(values)
+        try {
+            await sendContactForm(values)
+        } catch (error) {
+            setState((prev) => ({
+                ...prev,
+                isLoding: false,
+                error:error.message,
+            }));
+        }
     };
 
     return (
@@ -77,6 +85,11 @@ const ContactComponent = () => {
                                             <input type="file" id="attachment" name="attachment" />
                                         </label>
                                     </div>
+                                    {
+                                        error && (
+                                            <p style={{color:"red", fontSize:"18px", fontWeight:"700",margin:"10px 0px", textAlign:"center" }}>{error}</p>
+                                        )
+                                    }
                                     <div className="col-12">
                                         <button className="btnMessage font12White" onClick={onSubmit} isLoding={isLoding}>{" "}SEND MESSAGE</button>
                                     </div>

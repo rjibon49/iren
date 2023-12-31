@@ -52,7 +52,7 @@ const HomeComponent = () => {
             <div className='container compoHeightLarge backgroundLogo alignCenter mt-5'>
                 <div className='row w-100 mt-5'>
                     <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12'>
-                        <div className={`profile ${scrollPosition < 10700 ? 'fixed' : ''}`}>
+                        <div className={`profile ${scrollPosition < 10800 ? 'fixed' : ''}`}>
                             <div className='leftCard p-5'>
                                 <div className='d-flex justify-content-between align-items-center flex-wrap mb-3 w-100 m-0'>
                                     <p className='nameFont'>IREN</p>

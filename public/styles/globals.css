@@ -237,6 +237,16 @@ ul, li {
   border: 1px solid #565656;
   opacity: 0.8531;
 }
+.mailTextTitle {
+  font-size: 24px;
+  color: #2a2a2a;
+  font-weight: 700;
+}
+.mailTextBody {
+  font-size: 24px;
+  color: #2a2a2a;
+  font-weight: 700;
+}
 
 /* ==================== Color CSS Style ============================
 ====================================================================*/
@@ -507,10 +517,11 @@ ul, li {
 }
 .footerVideo {
   width: 50%;
+  min-height: 400px;
 }
 .videoIntro {
   width: 100%;
-  height: 200%;
+  height: 320px;
 }
 
 /* ================ Responsive Design CSS Style ====================
