@@ -17,7 +17,7 @@ export default function Home() {
   useEffect(() => {
     // Simulate a delay (you can replace this with actual data loading logic)
     const loadData = async () => {
-      await new Promise(resolve => setTimeout(resolve, 2000)); // Simulating a 2-second delay
+      await new Promise(resolve => setTimeout(resolve, 5000)); // Simulating a 5-second delay
       setLoading(false);
     };
 
