@@ -29,7 +29,7 @@ const HomeComponent = () => {
             };
         }, []);
 
-        const str = "SUBSCRIBE ME - SUBSCRIBE ME -";
+        // const str = "SUBSCRIBE ME - SUBSCRIBE ME -";
       
         useEffect(() => {
             const intervalId = setInterval(() => {
@@ -105,11 +105,11 @@ const HomeComponent = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div>
-                                    {/* <p className="" id='text'>
+                                {/* <div>
+                                    <p className="" id='text'>
                                         <SubscribeAnimation text={str} />
-                                    </p> */}
-                                </div>
+                                    </p>
+                                </div> */}
                             </div>
                         </div>
                     </div>

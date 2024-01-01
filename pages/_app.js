@@ -17,19 +17,13 @@ export default function App({ Component, pageProps }) {
 },[])
   return <>
     <Head>
-    <title>Visualesage</title>
-      
-      <meta charSet="UTF-8" />
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-      ></meta>
-      <meta name="title" content="Iren Akter Rone"></meta>
-      <meta name="description" content="Build your dream"></meta>
-      
-
-      {/* Link  */}
-    </Head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="title" content="Elevating Digital Experiences through Innovative Design" />
+      <meta name="description" content="Explore VisualSage.xyz for a captivating journey through cutting-edge web design and graphic innovations. Our portfolio showcases a harmonious blend of creativity and functionality, delivering modern, user-centric experiences that redefine digital engagement." />
+      <meta name="keywords" content="VisualSage, Creative Web Design Showcase, UI/UX Innovations, Graphic Design Excellence, Digital Art Gallery, Interactive User Interfaces, Trendsetting Web Development, Modern Design Solutions, Innovative User Experience, Responsive Design Projects, visualsage0, designeriren, irenakter2, uiux, portfolio, ui porfolio, ux portfolio, desiner portfolio, graphics desiner" />
+      <title>VisualSage</title>
+  </Head>
     
     <Script
       id="bootstrap-cdn"

@@ -3,43 +3,106 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesUp, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { sendContactForm } from '../../lib/api';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactComponent = () => {
-
-    const initlValues = {
+    const initialValues = {
         name: "",
         email: "",
         number: "",
         budget: "",
         subject: "",
-        message: ""
-    }
-    const initState = {values: initlValues}
+        message: "",
+        attachment: null, // Track the selected file
+    };
 
-    const [state, setState] = useState(initState);
+    const [state, setState] = useState({
+        values: initialValues,
+        isLoading: false,
+        error: null,
+    });
 
-    const {values, isLoding, error} = state;
+    const { values, isLoading, error } = state;
 
-    const handleChange = ({target}) => setState((prev) => ({
-        ...prev,
-        values: {
-            ...prev.values,
-            [target.name]: target.value
-        }
-    }))
-
-    const onSubmit = async () => {
-        setState((prev) => ({
-            ...prev,
-            isLoding: true
-        }));
-        try {
-            await sendContactForm(values)
-        } catch (error) {
+    const handleChange = ({ target }) => {
+        // Check if the target is a file input
+        if (target.type === 'file') {
+            // Update the state with the selected file
             setState((prev) => ({
                 ...prev,
-                isLoding: false,
-                error:error.message,
+                values: {
+                    ...prev.values,
+                    attachment: target.files[0], // Assuming single file selection
+                },
+            }));
+        } else {
+            // Update the state for other input fields
+            setState((prev) => ({
+                ...prev,
+                values: {
+                    ...prev.values,
+                    [target.name]: target.value,
+                },
+            }));
+        }
+    };
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+
+        // Start loading
+        setState((prev) => ({
+            ...prev,
+            isLoading: true,
+        }));
+
+        try {
+            // Pass the selected file to the sendContactForm function
+            await sendContactForm(values);
+
+            // Reset form fields after successful submission
+            setState({
+                values: initialValues,
+                isLoading: false,
+                error: null,
+            });
+
+            // Show success toast
+            toast.success('Message sent successfully!', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+        } catch (error) {
+            // Stop loading on error
+            setState((prev) => ({
+                ...prev,
+                isLoading: false,
+                error: error.message,
+            }));
+
+            // Show error toast
+            toast.error('Failed to send message. Please try again.', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+        } finally {
+            // Reset button text to "SEND MESSAGE" after success or error
+            setState((prev) => ({
+                ...prev,
+                isLoading: false,
             }));
         }
     };
@@ -54,7 +117,7 @@ const ContactComponent = () => {
                                 <span className='sectionTitleFont'><FontAwesomeIcon icon={faEnvelope} className='me-4'/>CONTACT</span>
                             </div>
                             <div className=''>
-                                <form className="row gap-5">
+                                <form className="row gap-5" onSubmit={onSubmit}>
                                     <div className="col-md-5 form-group">
                                         <label for="inputName" className="form-label mb-2">FULL NAME <span className='colorText'>*</span></label>
                                         <input type="text" required className="form-control" id="inputName" placeholder='Your Full Name' value={values.name} name="name" onChange={handleChange} />
@@ -79,19 +142,23 @@ const ContactComponent = () => {
                                         <label for="inutMessage" className="form-label mb-2">MESSAGE</label>
                                         <textarea className="form-control" id="inutMessage" rows="5" value={values.message} name="message" onChange={handleChange}></textarea>
                                     </div>
-                                    <div className='col-md-5 mb-3' form-group>
+                                    <div className='col-md-5 mb-3 form-group' >
                                         <label className="custom-file-input d-flex align-items-center" for="attachment">
-                                            <FontAwesomeIcon icon={faAnglesUp} className='me-3 iconStyle'/> <span className='font12White'>ADD AN ATTACHMENT</span>
-                                            <input type="file" id="attachment" name="attachment" />
+                                            <FontAwesomeIcon icon={faAnglesUp} className='me-3 iconStyle'/>{' '}<span className='font12White'> {values.attachment ? values.attachment.name : 'ADD AN ATTACHMENT'}</span>
+                                            <input type="file" id="attachment" name="attachment" onChange={handleChange} />
                                         </label>
                                     </div>
-                                    {
-                                        error && (
-                                            <p style={{color:"red", fontSize:"18px", fontWeight:"700",margin:"10px 0px", textAlign:"center" }}>{error}</p>
-                                        )
-                                    }
                                     <div className="col-12">
-                                        <button className="btnMessage font12White" onClick={onSubmit} isLoding={isLoding}>{" "}SEND MESSAGE</button>
+                                        <button className="btnMessage font12White" onClick={onSubmit} disabled={isLoading}>
+                                            {isLoading ? (
+                                                <div className="d-flex justify-content-center btnMessageSpin">
+                                                    <div className="spinner-border spinner-border-sm" role="status">
+                                                        <span className="visually-hidden">Loading...</span>
+                                                    </div>
+                                                </div>
+                                            ) : 'SEND MESSAGE'}
+                                        </button>
+                                        <ToastContainer />
                                     </div>
                                 </form>
                             </div>
@@ -104,5 +171,3 @@ const ContactComponent = () => {
 };
 
 export default ContactComponent;
-
-// disabled={!values.name || !values.email || values.subject || !values.message}

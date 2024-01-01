@@ -7,20 +7,6 @@ import CertificateCompo from './Misc/CertificateCompo';
 
 const EducationComponent = () => {
 
-    // const experience = [
-    //     {
-    //       date: '2022 - Present',
-    //       title: 'UX Designer (Remotely)',
-    //       location: 'DicoIT Agency, USA ',
-    //     },
-    //     {
-    //       date: '2023-02-01',
-    //       title: 'Event 2',
-    //       description: 'Description for Event 2',
-    //     },
-    //     // Add more events as needed
-    //   ];
-
     return (
         <>
             <div className='container educationHeight alignCenter' id='resume'>
