@@ -24,7 +24,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <div className='d-flex align-items-center justify-content-evenly w-25 mt-5 mx-auto'>
+                    <div className='d-flex align-items-center justify-content-evenly iconWidth mt-5 mx-auto'>
                         <Link href="https://www.facebook.com/visualsage0"><a><FontAwesomeIcon icon={faFacebook} className='socialIcon' /></a></Link> 
                         <Link href="https://twitter.com/irenaktar"><a><FontAwesomeIcon icon={faTwitter} className='socialIcon' /></a></Link> 
                         <Link href="https://dribbble.com/irenaktar"><a><FontAwesomeIcon icon={faDribbble} className='socialIcon' /></a></Link> 

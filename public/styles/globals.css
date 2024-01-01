@@ -70,6 +70,13 @@ ul, li {
   overflow-y: auto;
   transition: top 0.3s; /* Optional: Add a smooth transition effect */
 }
+.fixed-top  {
+  right: 10% !important;
+  left: 3% !important;
+}
+.iconWidth {
+  width: 25%;
+}
 
 .fixed {
   position: fixed;
@@ -578,6 +585,9 @@ ul, li {
   .counterWidth {
     width: 50%;
   }
+  .iconWidth {
+    width: 35%;
+  }
 }
 
 /* Medium devices (laptops, desktops) */
@@ -602,6 +612,9 @@ ul, li {
     width: 30%;
   }
   .counterWidth {
+    width: 50%;
+  }
+  .iconWidth {
     width: 50%;
   }
 }
@@ -667,5 +680,8 @@ ul, li {
   }
   .teamBorder {
     width: 100%;
+  }
+  .iconWidth {
+    width: 80%;
   }
 }
