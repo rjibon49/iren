@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
 },[])
   return <>
     <Head>
-      <meta charset="UTF-8" />
+      <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="title" content="Elevating Digital Experiences through Innovative Design" />
       <meta name="description" content="Explore VisualSage.xyz for a captivating journey through cutting-edge web design and graphic innovations. Our portfolio showcases a harmonious blend of creativity and functionality, delivering modern, user-centric experiences that redefine digital engagement." />

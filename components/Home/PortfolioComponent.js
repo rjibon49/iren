@@ -37,7 +37,7 @@ const PortfolioComponent = () => {
                                 <div className='portfolioContentWidth'>
                                     <Link href="https://dribbble.com/shots/23350321-Travel-Agency-Website-design" target="_blank"><a target="_blank">
                                         <Image src={barAndRes} alt='Bar & restaurant Website Design' className='' />
-                                        <h3 className='font20White mt-3'>Bar & restaurant Website Design</h3>
+                                        <h3 className='font20White mt-3'>Travel Agency Website Design</h3>
                                     </a></Link>
                                 </div>
                                 <div className='portfolioContentWidth'>

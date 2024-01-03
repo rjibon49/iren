@@ -49,7 +49,7 @@ const HomeComponent = () => {
 
     return (
         <>
-            <div className='container compoHeightLarge backgroundLogo alignCenter mt-5'>
+            <div className='container compoHeightLarge backgroundLogo alignCenter'>
                 <div className='row w-100 mt-5'>
                     <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12'>
                         <div className={`profile ${scrollPosition < 10800 ? 'fixed' : ''}`}>
