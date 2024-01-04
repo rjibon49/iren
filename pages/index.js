@@ -46,8 +46,8 @@ export default function Home() {
         <SkillsComponent />
         <PortfolioComponent />
         <HourlyBooking />
-        <CalendlyComponent />
         <TeamComponent />
+        <CalendlyComponent />
         <ContactComponent />
       </Layout>
     </>
