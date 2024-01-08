@@ -2,10 +2,10 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import photo from "../../public/images/content/irenAkterRone.png";
+import subs from "../../public/images/content/subscribeMe.svg";
 import { faDribbble, faFacebook, faInstagram, faLinkedin, faMedium, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faHome } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
-// import SubscribeAnimation from './Misc/SubscribeAnimation';
 
 
 const HomeComponent = () => {
@@ -29,7 +29,6 @@ const HomeComponent = () => {
             };
         }, []);
 
-        // const str = "SUBSCRIBE ME - SUBSCRIBE ME -";
       
         useEffect(() => {
             const intervalId = setInterval(() => {
@@ -50,27 +49,27 @@ const HomeComponent = () => {
     return (
         <>
             <div className='container compoHeightLarge backgroundLogo alignCenter'>
-                <div className='row w-100 mt-5'>
+                <div className='row w-100'>
                     <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12'>
-                        <div className={`profile ${scrollPosition < 9400 ? 'fixed' : ''}`}>
+                        <div className={`profile ${scrollPosition < 9800 ? 'fixed' : ''}`}>
                             <div className='leftCard p-5'>
                                 <div className='d-flex justify-content-between align-items-center flex-wrap mb-3 w-100 m-0'>
                                     <p className='nameFont'>IREN</p>
                                     <p className='designationFont'>UX Researcher <br /> & Designer</p>
                                 </div>
                                 <div className='profilePhoto mb-5'>
-                                    <Image src={photo} alt='Iren Akter Rone' className='' />
+                                    <Image src={photo} alt='Iren Akter Rone' className='profileImage' />
                                 </div>
                                 <div className='text-center mb-5'>
                                     <a href='mailto:"iren@visualsage.xyz'> <h3 className='font24White'>iren@visualsage.xyz</h3></a>
                                     <h4 className='locationFont'>Bangladesh</h4>
                                 </div>
                                 <div className='d-flex align-items-center justify-content-evenly mb-5 w-100 m-0'>
-                                     <Link href="https://www.facebook.com/visualsage0"><a><FontAwesomeIcon icon={faFacebook} className='socialIcon' /></a></Link> 
+                                     <Link href="https://www.facebook.com/visualsageux"><a><FontAwesomeIcon icon={faFacebook} className='socialIcon' /></a></Link> 
                                      <Link href="https://twitter.com/irenaktar"><a><FontAwesomeIcon icon={faTwitter} className='socialIcon' /></a></Link> 
                                      <Link href="https://dribbble.com/irenaktar"><a><FontAwesomeIcon icon={faDribbble} className='socialIcon' /></a></Link> 
                                      <Link href="https://www.linkedin.com/in/irenaktar"><a><FontAwesomeIcon icon={faLinkedin} className='socialIcon' /></a></Link> 
-                                     <Link href="https://www.instagram.com/visualsage0/"><a><FontAwesomeIcon icon={faInstagram} className='socialIcon' /></a></Link> 
+                                     <Link href="https://www.instagram.com/visualsageux/"><a><FontAwesomeIcon icon={faInstagram} className='socialIcon' /></a></Link> 
                                      {/* <Link href="https://www.youtube.com/@visualsage0"><a><FontAwesomeIcon icon={faYoutube} className='socialIcon' /></a></Link>  */}
                                      {/* <Link href="https://medium.com/@irenaktar2"><a><FontAwesomeIcon icon={faMedium} className='socialIcon' /></a></Link>  */}
                                 </div>
@@ -105,11 +104,15 @@ const HomeComponent = () => {
                                         </div>
                                     </div>
                                 </div>
-                                {/* <div>
-                                    <p className="" id='text'>
-                                        <SubscribeAnimation text={str} />
-                                    </p>
-                                </div> */}
+                                <div className='subsContainer'>
+                                    {/* <div className=''>
+                                        <Link href="https://www.youtube.com/@visualsageux"><a className='SubsIcon'><FontAwesomeIcon icon={faArrowDown} className='arrowIcon' /></a></Link>
+                                    </div> */}
+                                    <div className='subsItems'>
+                                        <Link href="https://www.youtube.com/@visualsageux"><a className='SubsIcon'><FontAwesomeIcon icon={faArrowDown} className='arrowIcon' /></a></Link>
+                                        <Image src={subs} alt='SubscribeMe Button' className='subsImage' />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

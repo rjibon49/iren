@@ -10,6 +10,7 @@ import HourlyBooking from '../components/Home/HourlyBooking';
 import TeamComponent from '../components/Home/TeamComponent';
 import ContactComponent from '../components/Home/ContactComponent';
 import CalendlyComponent from '../components/Home/CalendlyComponent';
+import TestimoialComponent from '../components/Home/TestimoialComponent';
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -47,6 +48,7 @@ export default function Home() {
         <PortfolioComponent />
         <HourlyBooking />
         <TeamComponent />
+        <TestimoialComponent />
         <CalendlyComponent />
         <ContactComponent />
       </Layout>

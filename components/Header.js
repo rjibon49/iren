@@ -35,6 +35,12 @@ const Header = () => {
           smooth: true,
         });
       };
+    const scrollToTestimonial= () => {
+        scroll.scrollTo('#testimonial', {
+          duration: 500,
+          smooth: true,
+        });
+      };
     const scrollToContact= () => {
         scroll.scrollTo('#contact', {
           duration: 500,
@@ -122,6 +128,20 @@ const Header = () => {
                                     onClick={scrollToPortfolio}
                                     >
                                     Portfolios
+                                </ScrollLink>
+                            </li>
+                            <li className="nav-item">
+                                {/* <Link href="#testimonial"><a className="nav-link " aria-current="page" >Testimonial</a></Link> */}
+                                <ScrollLink
+                                    to="testimonial"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    className="nav-link"
+                                    onClick={scrollToTestimonial}
+                                    >
+                                    Testimonial
                                 </ScrollLink>
                             </li>
                             {/* <li className="nav-item">
