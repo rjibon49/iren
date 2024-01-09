@@ -88,12 +88,12 @@ const HomeComponent = () => {
                                 <h1 className='introFontTitle mb-5'>Hi from <span className='colorText'>IREN</span>, <br />UX Researcher and <br />Designer</h1>
                                 <p className='font16c999 introSubWidth mb-5'>I focus on making digital experiences smooth and easy by studying what users need and coming up with creative design ideas.</p>
                             </div>
-                            <div className='d-flex justify-content-between'>
+                            <div className='d-flex justify-content-between flex-wrap gap-4'>
                                 <div className='counterWidth'>
                                     <div className='mb-5 pb-5'>
                                         <Link href="https://www.figma.com/file/oOPYKB4RQZLtMgTBw64ITH/Iren-UX-Portfolio?type=design&node-id=0%3A1&mode=design&t=4dO8PF0wtSN10M6v-1"><a className='font16 resumeBtn text-center'>MY RESUME</a></Link>
                                     </div>
-                                    <div className='d-flex justify-content-around'>
+                                    <div className='d-flex justify-content-center gap-5'>
                                         <div className=''>
                                             <p className='font72 colorText mb-5'>2+</p>
                                             <p className='designationFont'>Years of <br />Experience</p>
@@ -104,10 +104,7 @@ const HomeComponent = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='subsContainer'>
-                                    {/* <div className=''>
-                                        <Link href="https://www.youtube.com/@visualsageux"><a className='SubsIcon'><FontAwesomeIcon icon={faArrowDown} className='arrowIcon' /></a></Link>
-                                    </div> */}
+                                <div className='subsContainer mx-auto'>
                                     <div className='subsItems'>
                                         <Link href="https://www.youtube.com/@visualsageux"><a className='SubsIcon'><FontAwesomeIcon icon={faArrowDown} className='arrowIcon' /></a></Link>
                                         <Image src={subs} alt='SubscribeMe Button' className='subsImage' />

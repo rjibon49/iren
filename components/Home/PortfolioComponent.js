@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGripVertical } from '@fortawesome/free-solid-svg-icons';
 import cafeCrave from "../../public/images/content/cafecarve-coffeeshop.png";
 import nft from "../../public/images/content/NFT-website-Design.png";
-import barAndRes from "../../public/images/content/Bar&RestaurantWebsite.png";
+import barAndRes from "../../public/images/content/TreavelAgency.jpg";
 import realEstate from "../../public/images/content/Real-Estate_Website.png";
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,29 +23,32 @@ const PortfolioComponent = () => {
                             </div>
                             <div>
                                 <Link href="https://www.behance.net/gallery/184304483/cafecarve-coffeeshop-case-study" ><a target="_blank">
-                                    <Image src={cafeCrave} alt='Cafe Crave Coffee Shop Case Study' className='' />
+                                    <Image src={cafeCrave} alt='Cafe Crave Coffee Shop Case Study' className='portfolioImage' />
                                     <h3 className='font24White mt-3'>CafeCrave Coffeeshop Case Study</h3>
                                 </a></Link>
                             </div>
                             <div className='d-flex justify-content-start flex-wrap gap-4 my-5'>
                                 <div className='portfolioContentWidth'>
                                     <Link href="https://dribbble.com/shots/23062399-NFT-Website-Design" target="_blank"><a target="_blank">
-                                        <Image src={nft} alt='NFT Website Design' className='' />
+                                        <Image src={nft} alt='NFT Website Design' className='portfolioImage' />
                                         <h3 className='font20White mt-3'>NFT Website Design</h3>
                                     </a></Link>
                                 </div>
                                 <div className='portfolioContentWidth'>
                                     <Link href="https://dribbble.com/shots/23350321-Travel-Agency-Website-design" target="_blank"><a target="_blank">
-                                        <Image src={barAndRes} alt='Bar & restaurant Website Design' className='' />
+                                        <Image src={barAndRes} alt='Bar & restaurant Website Design' className='portfolioImage' />
                                         <h3 className='font20White mt-3'>Travel Agency Website Design</h3>
                                     </a></Link>
                                 </div>
                                 <div className='portfolioContentWidth'>
-                                    <Link href="https://dribbble.com/shots/22262915-Real-estate-website-design" target="_blank"><a target="_blank">
-                                        <Image src={realEstate} alt='Real Estate Website Design' className='' />
+                                    <Link href="https://dribbble.com/shots/23405259-Creative-Real-Estate-website-design" target="_blank"><a target="_blank">
+                                        <Image src={realEstate} alt='Real Estate Website Design' className='portfolioImage' />
                                         <h3 className='font20White mt-3'>Real Estate Website Design</h3>
                                     </a></Link>  
                                 </div>
+                            </div>
+                            <div className=''>
+                                <h1 className='protfolioText'>Kindly explore my designs on <Link href="https://dribbble.com/irenaktar"><a><span className='colorText'>Dribbble</span></a></Link> and <Link href="https://www.behance.net/irenaktar2"><a><span className='colorText'>Behance</span></a></Link> for more inspiration.</h1>
                             </div>
                         </div>
                     </div>

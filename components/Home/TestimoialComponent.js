@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Autoplay, Pagination, Navigation} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
-import "swiper/css/effect-cube";
+// import "swiper/css/effect-cube";
 import "swiper/css/pagination";
 import 'swiper/css/navigation';
 import { faComments } from '@fortawesome/free-regular-svg-icons';
@@ -59,6 +59,7 @@ const TestimoialComponent = () => {
                                         delay: 4000,
                                         disableOnInteraction: false,
                                         }}
+                                        // navigation={true}
                                     pagination={{
                                     clickable: true,
                                     }}
@@ -85,30 +86,30 @@ const TestimoialComponent = () => {
                                         >
                                             {comments.map((comment) => (
                                                 <SwiperSlide key={comment.name}>
-                                                <div className='testimonialItem' >
-                                                <div className='d-flex justify-content-start gap-3'>
-                                                    <div>
-                                                    <Image src={dummy} alt='User Icon' className='' />
+                                                    <div className='testimonialItem' >
+                                                        <div className='d-flex justify-content-start gap-3'>
+                                                            <div>
+                                                            <Image src={dummy} alt='User Icon' className='' />
+                                                            </div>
+                                                            <div>
+                                                            <p className='font18White p-0 m-0'>{comment.name}</p>
+                                                            <p className='font14c999 p-0 m-0'>
+                                                                {comment.designation} 
+                                                                {comment.company ? (
+                                                                    <span><span> of </span> <span className='colorText'>{comment.company}</span></span>
+                                                                ) : null}
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <p className='font24White my-5'>{comment.message}</p>
+                                                        </div>
+                                                        <div className='d-flex justify-content-start gap-4'>
+                                                            <span className='font12White'>{comment.projets} Projects</span>
+                                                            <span className='font12White'>|</span>
+                                                            <span className='font12White'>{comment.jobType}</span>
+                                                        </div>
                                                     </div>
-                                                    <div>
-                                                    <p className='font18White p-0 m-0'>{comment.name}</p>
-                                                    <p className='font14c999 p-0 m-0'>
-                                                        {comment.designation} 
-                                                        {comment.company ? (
-                                                            <span><span> of </span> <span className='colorText'>{comment.company}</span></span>
-                                                        ) : null}
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <p className='font24White my-5'>{comment.message}</p>
-                                                </div>
-                                                <div className='d-flex justify-content-start gap-4'>
-                                                    <span className='font12White'>{comment.projets} Projects</span>
-                                                    <span className='font12White'>|</span>
-                                                    <span className='font12White'>{comment.jobType}</span>
-                                                </div>
-                                                </div>
                                                 </SwiperSlide>
                                             ))}
                                                 
