@@ -54,24 +54,43 @@ const ContactComponent = () => {
 
     const onSubmit = async (event) => {
         event.preventDefault();
-
+    
+        // Check if required fields are empty
+        const requiredFields = ['name', 'email', 'subject', 'message'];
+        const emptyFields = requiredFields.filter(field => !values[field]);
+    
+        if (emptyFields.length > 0) {
+            // Show error toast for empty fields
+            toast.error(`Please fill in the required fields: ${emptyFields.join(', ')}`, {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+            return;
+        }
+    
         // Start loading
         setState((prev) => ({
             ...prev,
             isLoading: true,
         }));
-
+    
         try {
             // Pass the selected file to the sendContactForm function
             await sendContactForm(values);
-
+    
             // Reset form fields after successful submission
             setState({
                 values: initialValues,
                 isLoading: false,
                 error: null,
             });
-
+    
             // Show success toast
             toast.success('Message sent successfully!', {
                 position: "top-right",
@@ -90,7 +109,7 @@ const ContactComponent = () => {
                 isLoading: false,
                 error: error.message,
             }));
-
+    
             // Show error toast
             toast.error('Failed to send message. Please try again.', {
                 position: "top-right",

@@ -1,7 +1,7 @@
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Head from 'next/head';
 import Script from 'next/script';
-import '/public/styles/globals.css'
+import '/public/styles/global.minify.css'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";

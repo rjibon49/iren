@@ -7,7 +7,6 @@ const CONTACT_MESSAGE_FIELDS = {
     name: "name",
     email: "email",
     number: "number",
-    subject: "subject",
     budget: "budget",
     message: "message",
 };
