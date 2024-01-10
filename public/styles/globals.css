@@ -788,4 +788,8 @@ ul, li {
   .footerHeight {
     margin-top: 75px;
   }
+  .gotoTopIcon {
+    font-size: 12px;
+    padding: 3px 4px;
+  }
 }
