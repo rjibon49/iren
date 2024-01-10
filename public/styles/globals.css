@@ -348,7 +348,7 @@ ul, li {
 }
 .btnMessage:hover {
   background: #D9D9D9;
-  color: white;
+  color: var(--Gray-700, #344054);
   transition: all 0.5s ease-in-out ;
 }
 .btnMessageSpin {
