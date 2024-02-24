@@ -10,8 +10,8 @@ const EducationComponent = () => {
     return (
         <>
             <div className='container educationHeight alignCenter' id='resume'>
-                <div className='row w-100 justify-content-end'>
-                    <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
+                <div className='row w-100 justify-content-start'>
+                    <div className='col-xxl-6 col-xl-6 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
                         <div className=''>
                             <div className='mb-5'>
                                 <span className='sectionTitleFont'><FontAwesomeIcon icon={faUserGraduate} className='me-4'/>RESUME</span>

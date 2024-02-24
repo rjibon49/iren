@@ -13,6 +13,7 @@ const HomeComponent = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
 
         const [count, setCount] = useState(0);
+        const [country, setCountry] = useState(0);
 
          // Update the scroll position on scroll
         const handleScroll = () => {
@@ -46,10 +47,67 @@ const HomeComponent = () => {
             return () => clearInterval(intervalId);
           }, []);
 
+        useEffect(() => {
+            const intervalId = setInterval(() => {
+              setCountry((prevCount) => {
+                if (prevCount < 16) {
+                  return prevCount + 1;
+                } else {
+                  clearInterval(intervalId);
+                  return prevCount;
+                }
+              });
+            }, 100);
+        
+            // Cleanup function to clear the interval when the component unmounts
+            return () => clearInterval(intervalId);
+          }, []);
+
     return (
         <>
             <div className='container compoHeightLarge backgroundLogo alignCenter'>
                 <div className='row w-100'>
+                    <div className='col-xxl-8 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
+                        <div>
+                            {/* <div className='mb-5'>
+                                <span className='sectionTitleFont'><FontAwesomeIcon icon={faHome} className='me-4' />introduction</span>
+                            </div> */}
+                            <div className=''>
+                                <h1 className='introFontTitle mb-5'><span className='colorText'><b>Greetings</b></span> form <span className='colorTextPurple'><b>Iren</b></span>, <br /> I am a UX Researcher and Designer.</h1>
+                            </div>
+                            <div className='d-flex justify-content-between flex-wrap'>
+                                
+                                <div className=''>
+                                    <p className='font16c999 introSubWidth mb-5'>I focus on making digital experiences smooth and easy by studying what users need and coming up with creative design ideas.</p>
+                                    <div className=''>
+                                        <Link href="https://www.figma.com/file/oOPYKB4RQZLtMgTBw64ITH/Iren-UX-Portfolio?type=design&node-id=0%3A1&mode=design&t=4dO8PF0wtSN10M6v-1"><a className='font16 resumeBtn text-center'>MY RESUME</a></Link>
+                                    </div>
+                                </div>
+                                <div className='subsContainer mx-auto'>
+                                    <div className='subsItems'>
+                                        <Link href="https://www.youtube.com/@visualsageux"><a className='SubsIcon'><FontAwesomeIcon icon={faArrowDown} className='arrowIcon' /></a></Link>
+                                        <Image src={subs} alt='SubscribeMe Button' className='subsImage' />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='d-flex justify-content-evenly px-5 mx-5 gap-5 align-items-center rounded-pill mt-5 py-3' style={{border:"5px solid #242424"}}>
+                                <div className='text-center'>
+                                    <p className='font72 text-white'>2+</p>
+                                    <p className='designationFont mt-3'>Years of <br />Experience</p>
+                                </div>
+                                <span className='rightBorder'></span>
+                                <div className='text-center'>
+                                    <p className='font72 text-white'>{count}+</p>
+                                    <p className='designationFont mt-3'>projects <br /> completed</p>
+                                </div>
+                                <span className='rightBorder'></span>
+                                <div className='text-center'>
+                                    <p className='font72 text-white'>{country}+</p>
+                                    <p className='designationFont mt-3'>countries <br /> worldwide </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12'>
                         <div className={`profile ${scrollPosition < 9800 ? 'fixed' : ''}`}>
                             <div className='leftCard p-5'>
@@ -75,40 +133,6 @@ const HomeComponent = () => {
                                 </div>
                                 <div className='text-center'>
                                     <Link href="https://www.upwork.com/freelancers/~013a1545ed7b7f3fad"><a><button className='hireButton'>HIRE ME!</button></a></Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12 ms-auto'>
-                        <div>
-                            <div className='mb-5'>
-                                <span className='sectionTitleFont'><FontAwesomeIcon icon={faHome} className='me-4' />introduction</span>
-                            </div>
-                            <div className=''>
-                                <h1 className='introFontTitle mb-5'>Hi from <span className='colorText'>IREN</span>, <br />UX Researcher and <br />Designer</h1>
-                                <p className='font16c999 introSubWidth mb-5'>I focus on making digital experiences smooth and easy by studying what users need and coming up with creative design ideas.</p>
-                            </div>
-                            <div className='d-flex justify-content-between flex-wrap gap-4'>
-                                <div className='counterWidth'>
-                                    <div className='mb-5 pb-5'>
-                                        <Link href="https://www.figma.com/file/oOPYKB4RQZLtMgTBw64ITH/Iren-UX-Portfolio?type=design&node-id=0%3A1&mode=design&t=4dO8PF0wtSN10M6v-1"><a className='font16 resumeBtn text-center'>MY RESUME</a></Link>
-                                    </div>
-                                    <div className='d-flex justify-content-center gap-5'>
-                                        <div className=''>
-                                            <p className='font72 colorText mb-5'>2+</p>
-                                            <p className='designationFont'>Years of <br />Experience</p>
-                                        </div>
-                                        <div>
-                                            <p className='font72 colorText mb-5'>{count}+</p>
-                                            <p className='designationFont'>projects completed <br /> on 16 countries</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='subsContainer mx-auto'>
-                                    <div className='subsItems'>
-                                        <Link href="https://www.youtube.com/@visualsageux"><a className='SubsIcon'><FontAwesomeIcon icon={faArrowDown} className='arrowIcon' /></a></Link>
-                                        <Image src={subs} alt='SubscribeMe Button' className='subsImage' />
-                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -10,8 +10,23 @@ html, body {
 a {
   text-decoration: none;
 } 
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 ul, li {
   text-decoration: none;
+}
+.rightBorder {
+  height: 41px !important;
+  border: 3px solid white;
+}
+.resumeIcon {
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border: 2px solid #242424;
+  border-radius: 10px;
 }
 .compoHeightLarge {
   min-height: 950px;
@@ -59,9 +74,9 @@ ul, li {
 .introSubWidth {
   max-width: 526px;
 }
-.counterWidth {
+/* .counterWidth {
   width: 50%;
-}
+} */
 .hourlyWidth {
   width: 48%;
   min-height: 699px;
@@ -150,7 +165,7 @@ ul, li {
 .font72 {
   font-size: 72px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 700;
   line-height: 56px; /* 77.778% */
   letter-spacing: -0.2px;
 }
@@ -237,7 +252,6 @@ ul, li {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 23.8px;
 }
 .font14c999 {
   color: #999;
@@ -251,7 +265,6 @@ ul, li {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 22.1px; /* 170% */
 }
 .font13White {
   color: white;
@@ -274,10 +287,11 @@ ul, li {
   font-weight: 300;
   line-height: 14.4px; /* 120% */
   text-transform: uppercase;
-  padding: 9.3px 20.692px 10.7px 21px;
-  border-radius: 30px;
+  padding: 0 0 0 5px;
+  /* padding: 9.3px 20.692px 10.7px 21px; */
+  /* border-radius: 30px;
   border: 1px solid #565656;
-  opacity: 0.8531;
+  opacity: 0.8531; */
 }
 .protfolioText {
   font-size: 24px;
@@ -299,6 +313,9 @@ ul, li {
 ====================================================================*/
 .colorText {
   color: #FF693B;
+}
+.colorTextPurple {
+  color: #AF5FFF;
 }
 .colorText999 {
   color: #999;
@@ -408,8 +425,7 @@ ul, li {
 .backgroundLogo {
   background-image: url("/images/content/backgroundLogo.png");
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50%;
+  background-position: left;
 }
 .skillBackground {
   background-image: url("/images/content/myAdvantage.png");
@@ -424,11 +440,15 @@ ul, li {
   margin-left: 0px; /* Adjust the left margin based on your design */
 }
 
-.timeline-event {
+/* .timeline-event {
   position: relative;
   padding: 20px 0px 0px 20px;
   border-left: 2px solid #333;
   margin-top: -20px;
+} */
+.timeline-event {
+  border: 1px solid #242424;
+  border-radius: 20px;
 }
 
 .timeline-date {
@@ -442,7 +462,7 @@ ul, li {
 }
 
 /* Additional styling for better visuals */
-.timeline-event:last-child {
+/* .timeline-event:last-child {
   margin-bottom: 0;
 }
 
@@ -453,11 +473,10 @@ ul, li {
   left: -11px;
   width: 20px;
   height: 20px;
-  /* opacity: 0.7752; */
   background: #551C8F;
   border: 2px solid #333;
   border-radius: 50%;
-}
+} */
 /*======================= Name Card Section ===========================*/
 
 .leftCard {
@@ -671,9 +690,9 @@ ul, li {
   .hourlyWidth {
     padding: 15px;
   }
-  .counterWidth {
+  /* .counterWidth {
     width: 50%;
-  }
+  } */
   .iconWidth {
     width: 35%;
   }
@@ -705,9 +724,9 @@ ul, li {
   .portfolioContentWidth {
     width: 30%;
   }
-  .counterWidth {
+  /* .counterWidth {
     width: 50%;
-  }
+  } */
   .iconWidth {
     width: 50%;
   }
@@ -735,9 +754,9 @@ ul, li {
   .footerVideo {
     width: 100%;
   }
-  .counterWidth {
+  /* .counterWidth {
     width: 100%;
-  }
+  } */
   .introFontTitle  {
     font-size: 42px;
     line-height: 55px;
