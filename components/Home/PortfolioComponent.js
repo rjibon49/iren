@@ -12,11 +12,11 @@ const PortfolioComponent = () => {
     return (
         <>
             <div className='container portfolioHeight alignCenter' id='portfolio'>
-                <div className='row w-100 justify-content-end'>
+                <div className='row w-100 justify-content-start'>
                     <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
                         <div>
                             <div className='mb-5'>
-                                <span className='sectionTitleFont'><FontAwesomeIcon icon={faGripVertical} className='me-4'/>PORTFOLIO</span>
+                                <span className='sectionTitleFont'><FontAwesomeIcon icon={faGripVertical} className='me-3 fs-5'/>PORTFOLIO</span>
                             </div>
                             <div className=''>
                                 <h1 className='font48 mb-5'>Featured<span className='colorText'> Projects</span></h1>

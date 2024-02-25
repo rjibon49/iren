@@ -7,18 +7,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 const menuItems = [
-  { id: 'about', label: 'About' },
-  { id: 'resume', label: 'Resume' },
-  { id: 'service', label: 'Service' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'portfolio', label: 'Portfolios' },
-  { id: 'testimonial', label: 'Testimonial' },
-  { id: 'contact', label: 'Contact' },
+  { id: '#about', label: 'About' },
+  { id: '#resume', label: 'Resume' },
+  { id: '#service', label: 'Service' },
+  { id: '#skills', label: 'Skills' },
+  { id: '#portfolio', label: 'Portfolios' },
+  { id: '#testimonial', label: 'Testimonial' },
+  { id: '#contact', label: 'Contact' },
 ];
 
 const Header = () => {
   const scrollTo = (sectionId) => {
-    scroll.scrollTo(`#${sectionId}`, {
+    scroll.scrollTo({sectionId}, {
       duration: 1000,
       smooth: true,
     });
@@ -29,6 +29,17 @@ const Header = () => {
       duration: 1000,
       smooth: true,
     });
+  };
+
+  const smoothScroll = (targetId) => {
+    const targetElement = document.getElementById(targetId);
+  
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 70, // Adjust the offset based on your layout (navbar height)
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (
@@ -46,7 +57,7 @@ const Header = () => {
               </li>
               {menuItems.map(item => (
                 <li key={item.id} className="nav-item">
-                  <ScrollLink
+                  {/* <ScrollLink
                     to={item.id}
                     spy={true}
                     smooth={true}
@@ -56,7 +67,15 @@ const Header = () => {
                     onClick={() => scrollTo(item.id)}
                   >
                     {item.label}
-                  </ScrollLink>
+                    
+                  </ScrollLink> */}
+                  <a
+            href={item.id}
+            className="nav-link"
+            // onClick={() => smoothScroll(item.id)}
+          >
+            {item.label}
+          </a>
                 </li>
               ))}
             </ul>

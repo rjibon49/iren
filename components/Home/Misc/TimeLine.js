@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faUserCheck } from '@fortawesome/free-solid-svg-icons';
+import { faAward, faBriefcase, faGraduationCap, faUserCheck } from '@fortawesome/free-solid-svg-icons';
 
 const TimeLine = () => {
     return (
@@ -73,19 +73,29 @@ const TimeLine = () => {
 
             <div>
                 <div className="timeline-container">
-                    <p className='font16 ps-5 pb-3 ms-4 colorText'>Education</p>
-                    <div className="timeline-event " data-aos="fade-up">
-                        <div className='ps-5'>
-                            <p className="font16c999 pb-3">2022 - 2024</p>
-                            <h3 className='font24White pb-2'>Bachelor of Computer Science</h3>
-                            <p className='font13c999 pb-4'>University Of The People, USA</p>
-                        </div>
-                    </div>
-                    <div className="timeline-event " data-aos="fade-up">
-                        <div className='ps-5'>
-                            <p className="font16c999 pb-3">2011-2012</p>
-                            <h3 className='font24White pb-2'>Bachelor of English Literature</h3>
-                            <p className='font13c999 pb-4'>National University, Bangladesh</p>
+                    <p className='font16 pb-3 text-white'><FontAwesomeIcon icon={faGraduationCap} className='me-3'/>Education</p>
+                    <div className="timeline-event ps-5 py-3 mb-5" data-aos="fade-up">
+                        <div className=''>
+                            <p className="font16c999 pb-3 ps-5 ms-5">2022 - 2024</p>
+                            <div className='d-flex align-items-center pe-5 gap-5 mb-4'>
+                                <div>
+                                    <FontAwesomeIcon icon={faAward} className='resumeIcon'/>
+                                </div>
+                                <div>
+                                    <h3 className='font24White pb-2'>Bachelor of Computer Science</h3>
+                                    <p className='font13c999'>University Of The People, USA</p>
+                                </div>
+                            </div>
+                            <p className="font16c999 pb-3 ps-5 ms-5">2011-2012</p>
+                            <div className='d-flex align-items-center pe-5 gap-5 mb-4'>
+                                <div>
+                                    <FontAwesomeIcon icon={faAward} className='resumeIcon'/>
+                                </div>
+                                <div>
+                                    <h3 className='font24White pb-2'>Bachelor of English Literature</h3>
+                                    <p className='font13c999'>National University, Bangladesh</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

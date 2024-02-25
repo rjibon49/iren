@@ -136,7 +136,7 @@ const ContactComponent = () => {
                 <div className='row w-100 justify-content-between gap-5'>
                     <div className='col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12'>
                         <div className='mb-5'>
-                            <span className='sectionTitleFont'><FontAwesomeIcon icon={faEnvelope} className='me-4'/>CONTACT</span>
+                            <span className='sectionTitleFont'><FontAwesomeIcon icon={faEnvelope} className='me-3 fs-5'/>CONTACT</span>
                         </div>
                         <div className=''>
                             <form className="row gap-4" onSubmit={onSubmit}>

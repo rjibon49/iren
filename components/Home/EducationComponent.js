@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import TimeLine from './Misc/TimeLine';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
+import { faClipboardCheck } from '@fortawesome/free-solid-svg-icons';
 import CertificateCompo from './Misc/CertificateCompo';
 
 
@@ -14,7 +14,7 @@ const EducationComponent = () => {
                     <div className='col-xxl-6 col-xl-6 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
                         <div className=''>
                             <div className='mb-5'>
-                                <span className='sectionTitleFont'><FontAwesomeIcon icon={faUserGraduate} className='me-4'/>RESUME</span>
+                                <span className='sectionTitleFont'><FontAwesomeIcon icon={faClipboardCheck} className='me-3 fs-5'/>RESUME</span>
                             </div>
                             <div className=''>
                                 <TimeLine  />
@@ -25,10 +25,7 @@ const EducationComponent = () => {
             </div>
             <div className='container certificateHeight alignCenter'>
                 <div className='row w-100'>
-                    <div className='col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12'>
-
-                    </div>
-                    <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
+                    <div className='col-xxl-6 col-xl-6 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
                         <div className=''>
                             <div className=''>
                                 <CertificateCompo  />

@@ -40,11 +40,11 @@ const TestimoialComponent = () => {
     return (
         <>
             <div className='container testimonialHeight alignCenter' id='testimonial'>
-                <div className='row w-100 justify-content-end'>
+                <div className='row w-100 justify-content-start'>
                     <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
                         <div>
                             <div className='mb-5'>
-                                <span className='sectionTitleFont'><FontAwesomeIcon icon={faComments} className='me-4'/>TESTIMONIAL</span>
+                                <span className='sectionTitleFont'><FontAwesomeIcon icon={faComments} className='me-3 fs-5'/>TESTIMONIAL</span>
                             </div>
                             <div className=''>
                                 <h1 className='font48 '>Trusted by <span className='colorText'>Hundered Clients</span></h1>
