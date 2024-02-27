@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { faCirclePlay } from '@fortawesome/free-regular-svg-icons';
 import { faBehance, faDribbble, faFacebook, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import ReactPlayer from 'react-player'
+import SocialIcons from './Misc/SocialIcons';
 
 const ContactComponent = () => {
     const initialValues = {
@@ -132,7 +133,7 @@ const ContactComponent = () => {
 
     return (
         <>
-            <div className='container contactHeight alignCenter' id='contact'>
+            <div className='container' id='contact'>
                 <div className='row w-100 justify-content-between gap-5'>
                     <div className='col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12'>
                         <div className='mb-5'>
@@ -141,31 +142,31 @@ const ContactComponent = () => {
                         <div className=''>
                             <form className="row gap-4" onSubmit={onSubmit}>
                                 <div className="col-md-5 form-group">
-                                    <label for="inputName" className="form-label mb-2">FULL NAME <span className='colorText'>*</span></label>
-                                    <input type="text" required className="form-control" id="inputName" placeholder='Your Full Name' value={values.name} name="name" onChange={handleChange} />
+                                    <label htmlFor="inputName" className="form-label mb-2">FULL NAME <span className='colorText'>*</span></label>
+                                    <input type="text" autoComplete="off" required className="form-control" id="inputName" placeholder='Your Full Name' value={values.name} name="name" onChange={handleChange} />
                                 </div>
                                 <div className="col-md-5 form-group">
-                                    <label for="inputEmail4" className="form-label mb-2">EMAIL <span className='colorText'>*</span></label>
-                                    <input type="email" required className="form-control" id="inputEmail4" placeholder='Your Email Address' value={values.email} name="email" onChange={handleChange} />
+                                    <label htmlFor="inputEmail4" className="form-label mb-2">EMAIL <span className='colorText'>*</span></label>
+                                    <input type="email" autoComplete="off" required className="form-control" id="inputEmail4" placeholder='Your Email Address' value={values.email} name="email" onChange={handleChange} />
                                 </div>
                                 <div className="col-md-5 form-group">
-                                    <label for="inputSubject" className="form-label mb-2">SUBJECT <span className='colorText'>*</span></label>
-                                    <input type="text" required className="form-control" id="inputSubject" placeholder='Select a subject' value={values.subject} name="subject" onChange={handleChange} />
+                                    <label htmlFor="inputSubject" className="form-label mb-2">SUBJECT <span className='colorText'>*</span></label>
+                                    <input type="text" autoComplete="off" required className="form-control" id="inputSubject" placeholder='Select a subject' value={values.subject} name="subject" onChange={handleChange} />
                                 </div>
                                 <div className="col-md-5 form-group">
-                                    <label for="inputPhone" className="form-label mb-2">PHONE <span className='colorText999'>(optional)</span></label>
-                                    <input type="text" className="form-control" id="inputPhone" placeholder='Your Phone Number' value={values.number} name="number" onChange={handleChange} />
+                                    <label htmlFor="inputPhone" className="form-label mb-2">PHONE <span className='colorText999'>(optional)</span></label>
+                                    <input type="text" autoComplete="off" className="form-control" id="inputPhone" placeholder='Your Phone Number' value={values.number} name="number" onChange={handleChange} />
                                 </div>
                                 {/* <div className="col-md-5 form-group">
-                                    <label for="inputBudget" className="form-label mb-2">BUDGET <span className='colorText999'>(optional)</span></label>
+                                    <label htmlFor="inputBudget" className="form-label mb-2">BUDGET <span className='colorText999'>(optional)</span></label>
                                     <input type="text" className="form-control" id="inputBudget" placeholder='A range budget for your project' value={values.budget} name="budget" onChange={handleChange} />
                                 </div> */}
                                 <div className="col-md-10 messageForm form-group">
-                                    <label for="inutMessage" className="form-label mb-2">MESSAGE</label>
+                                    <label htmlFor="inutMessage" className="form-label mb-2">MESSAGE</label>
                                     <textarea className="form-control" id="inutMessage" rows="5" value={values.message} name="message" onChange={handleChange}></textarea>
                                 </div>
                                 <div className='col-md-5 mb-3 form-group' >
-                                    <label className="custom-file-input d-flex align-items-center" for="attachment">
+                                    <label className="custom-file-input d-flex align-items-center" htmlFor="attachment">
                                         <FontAwesomeIcon icon={faAnglesUp} className='me-3 iconStyle'/>{' '}<span className='font12White'> {values.attachment ? values.attachment.name : 'ADD AN ATTACHMENT'}</span>
                                         <input type="file" id="attachment" name="attachment" onChange={handleChange} />
                                     </label>
@@ -198,20 +199,8 @@ const ContactComponent = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className=''>
-                            
-                        </div>
-                        <div>
-                            <div className='d-flex align-items-center justify-content-evenly iconWidth mt-5 mx-auto'>
-                                <Link href="https://www.facebook.com/visualsageux"><a><FontAwesomeIcon icon={faFacebook} className='socialIcon' /></a></Link> 
-                                <Link href="https://twitter.com/irenaktar"><a><FontAwesomeIcon icon={faTwitter} className='socialIcon' /></a></Link> 
-                                <Link href="https://dribbble.com/irenaktar"><a><FontAwesomeIcon icon={faDribbble} className='socialIcon' /></a></Link> 
-                                <Link href="https://www.linkedin.com/in/irenaktar"><a><FontAwesomeIcon icon={faLinkedin} className='socialIcon' /></a></Link> 
-                                <Link href="https://www.instagram.com/visualsageux/"><a><FontAwesomeIcon icon={faInstagram} className='socialIcon' /></a></Link> 
-                                <Link href="https://www.behance.net/irenaktar2/"><a><FontAwesomeIcon icon={faBehance} className='socialIcon' /></a></Link> 
-                                {/* <Link href="https://www.youtube.com/@visualsage0"><a><FontAwesomeIcon icon={faYoutube} className='socialIcon' /></a></Link>
-                                <Link href="https://medium.com/@irenaktar2"><a><FontAwesomeIcon icon={faMedium} className='socialIcon' /></a></Link>  */}
-                            </div>
+                        <div className='mt-5 iconWidth ms-auto me-auto'>
+                            <SocialIcons />
                         </div>
                     </div>
                 </div>

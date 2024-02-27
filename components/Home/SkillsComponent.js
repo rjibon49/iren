@@ -33,7 +33,7 @@ const SkillsComponent = () => {
   };
 
   return (
-    <div className='container skillsHeight alignCenter skillBackground' id='skills'>
+    <div className='container skillBackground' id='skills'>
       <div className='row w-100 justify-content-start'>
         <div className='col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12'>
           <div>

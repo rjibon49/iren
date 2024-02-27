@@ -5,7 +5,7 @@ import { faAward, faBriefcase, faGraduationCap, faUserCheck } from '@fortawesome
 const TimeLine = () => {
     return (
         <>
-            <div className='pb-5'>
+            <div className=''>
                 <div className='pb-5'>
                     <h6 className='font48'>Education & <span className='colorText'>Experience</span></h6>
                 </div>

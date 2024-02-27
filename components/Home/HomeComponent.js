@@ -6,6 +6,7 @@ import subs from "../../public/images/content/subscribeMe.svg";
 import { faDribbble, faFacebook, faInstagram, faLinkedin, faMedium, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faArrowDown, faHome } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import SocialIcons from './Misc/SocialIcons';
 
 
 const HomeComponent = () => {
@@ -65,8 +66,8 @@ const HomeComponent = () => {
 
     return (
         <>
-            <div className='container compoHeightLarge backgroundLogo alignCenter'>
-                <div className='row w-100'>
+            <div className='container backgroundLogo mt-4'>
+                <div className='row w-100 homeFlex'>
                     <div className='col-xxl-8 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
                         <div>
                             {/* <div className='mb-5'>
@@ -80,17 +81,17 @@ const HomeComponent = () => {
                                 <div className=''>
                                     <p className='font16c999 introSubWidth mb-5'>I focus on making digital experiences smooth and easy by studying what users need and coming up with creative design ideas.</p>
                                     <div className=''>
-                                        <Link href="https://www.figma.com/file/oOPYKB4RQZLtMgTBw64ITH/Iren-UX-Portfolio?type=design&node-id=0%3A1&mode=design&t=4dO8PF0wtSN10M6v-1"><a className='font16 resumeBtn text-center'>MY RESUME</a></Link>
+                                        <Link href="https://www.figma.com/file/oOPYKB4RQZLtMgTBw64ITH/Iren-UX-Portfolio?type=design&node-id=0%3A1&mode=design&t=4dO8PF0wtSN10M6v-1"><a className='font16 resumeBtn text-center' target='_blank'>MY RESUME</a></Link>
                                     </div>
                                 </div>
-                                <div className='subsContainer mx-auto'>
+                                <div className='subsContainer ms-auto'>
                                     <div className='subsItems'>
-                                        <Link href="https://www.youtube.com/@visualsageux"><a className='SubsIcon'><FontAwesomeIcon icon={faArrowDown} className='arrowIcon' /></a></Link>
+                                        <Link href="https://www.youtube.com/@visualsageux"><a className='SubsIcon' target='_blank'><FontAwesomeIcon icon={faArrowDown} className='arrowIcon' /></a></Link>
                                         <Image src={subs} alt='SubscribeMe Button' className='subsImage' />
                                     </div>
                                 </div>
                             </div>
-                            <div className='d-flex justify-content-evenly px-5 mx-5 gap-5 align-items-center rounded-pill mt-5 py-3' style={{border:"5px solid #242424"}}>
+                            <div className='d-flex justify-content-between px-5 align-items-center rounded-pill mt-5 py-3' style={{border:"5px solid #242424"}}>
                                 <div className='text-center'>
                                     <p className='font72 text-white'>2+</p>
                                     <p className='designationFont mt-3'>Years of <br />Experience</p>
@@ -109,7 +110,7 @@ const HomeComponent = () => {
                         </div>
                     </div>
                     <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12'>
-                        <div className={`profile ${scrollPosition < 9800 ? 'fixed' : ''}`}>
+                        <div className={`profile ${scrollPosition < 8900 ? 'fixed' : ''}`}>
                             <div className='leftCard p-5'>
                                 <div className='d-flex justify-content-between align-items-center flex-wrap mb-3 w-100 m-0'>
                                     <p className='nameFont'>IREN</p>
@@ -122,17 +123,9 @@ const HomeComponent = () => {
                                     <a href='mailto:"iren@visualsage.xyz'> <h3 className='font24White'>iren@visualsage.xyz</h3></a>
                                     <h4 className='locationFont'>Bangladesh</h4>
                                 </div>
-                                <div className='d-flex align-items-center justify-content-evenly mb-5 w-100 m-0'>
-                                     <Link href="https://www.facebook.com/visualsageux"><a><FontAwesomeIcon icon={faFacebook} className='socialIcon' /></a></Link> 
-                                     <Link href="https://twitter.com/irenaktar"><a><FontAwesomeIcon icon={faTwitter} className='socialIcon' /></a></Link> 
-                                     <Link href="https://dribbble.com/irenaktar"><a><FontAwesomeIcon icon={faDribbble} className='socialIcon' /></a></Link> 
-                                     <Link href="https://www.linkedin.com/in/irenaktar"><a><FontAwesomeIcon icon={faLinkedin} className='socialIcon' /></a></Link> 
-                                     <Link href="https://www.instagram.com/visualsageux/"><a><FontAwesomeIcon icon={faInstagram} className='socialIcon' /></a></Link> 
-                                     {/* <Link href="https://www.youtube.com/@visualsage0"><a><FontAwesomeIcon icon={faYoutube} className='socialIcon' /></a></Link>  */}
-                                     {/* <Link href="https://medium.com/@irenaktar2"><a><FontAwesomeIcon icon={faMedium} className='socialIcon' /></a></Link>  */}
-                                </div>
+                                <SocialIcons />
                                 <div className='text-center'>
-                                    <Link href="https://www.upwork.com/freelancers/~013a1545ed7b7f3fad"><a><button className='hireButton'>HIRE ME!</button></a></Link>
+                                    <Link href="https://www.upwork.com/freelancers/~013a1545ed7b7f3fad"><a target='_blank'><button className='hireButton'>HIRE ME!</button></a></Link>
                                 </div>
                             </div>
                         </div>

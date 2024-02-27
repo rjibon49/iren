@@ -39,7 +39,7 @@ const TestimoialComponent = () => {
     
     return (
         <>
-            <div className='container testimonialHeight alignCenter' id='testimonial'>
+            <div className='container' id='testimonial'>
                 <div className='row w-100 justify-content-start'>
                     <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
                         <div>

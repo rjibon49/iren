@@ -5,71 +5,93 @@ import { faHandPointRight } from '@fortawesome/free-solid-svg-icons';
 
 
 const HourlyBooking = () => {
-    return (
-        <>
-            <div className='container hourlyHeight alignCenter' id='about'>
-                <div className='row w-100 justify-content-start'>
-                    <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
-                        <div>
-                            <div className=''>
-                                <h1 className='font48 mb-5'>Hourly <span className='colorText'>Pricing</span></h1>\
-                            </div>
-                        </div>
-                        <div className='d-flex justify-content-between align-items-center flex-wrap gap-3'>
-                            <div className='hourlyWidth'>
-                                <div className='d-flex justify-content-between align-items-center flex-wrap'>
-                                    <p className='font18White'>BASIC</p>
-                                    <p className='font13White text-end'>Need to redesign ? <br />or small budget</p>
-                                </div>
-                                <div>
-                                    <p className='font48 colorText'>$20<span className='font14c999'> / HOUR</span></p>
-                                    <div style={{borderBottom:"1px solid #555"}}></div>
-                                </div>
-                                <div className='pt-5'>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>1 Landing page design</p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>With graphics</p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Wireframes, Prototype</p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Responsive design</p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Include source file</p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Any graphic design project</p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Work in business days, no weekend.</p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Support 6 months</p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Time to time update</p>
-                                    <div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='hourlyWidth'>
-                                <div className='d-flex justify-content-between align-items-center flex-wrap'>
-                                    <p className='font18White'>PREMIUM</p>
-                                    <p className='font13White text-end'>Need to redesign ? <br />Leave its for me</p>
-                                </div>
-                                <div>
-                                    <p className='font48 colorText'>$60<span className='font14c999'> / HOUR</span></p>
-                                    <div style={{borderBottom:"1px solid #555"}}></div>
-                                </div>
-                                <div className='pt-5'>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Design from scratch </p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>10/12 Standard Mobile Screens Design with Source file, PNG, JPEG</p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Research, user flow, Wireframes, Prototype, Visual design, App testing</p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Website/ App with graphics and content</p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Design System</p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Responsive design</p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Work with both weekend</p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Support 6 months</p>
-                                    <p className='designationFont mb-3'><FontAwesomeIcon icon={faHandPointRight} className='me-3'/>Time to time update</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='p-5'>
-                            <p className='font16 pe-2'>Hey there! If you're thinking about bringing me on board every month, I'd be more than happy to chat with you and see how we can work together. Just drop me a line at <span className='colorText'>iren@visualsage.xyz</span> Can't wait to hear from you!</p>
-                        </div>
-                    </div>
-                </div>
+  const pricingOptions = [
+    {
+      type: 'BASIC',
+      description: 'Need to redesign?',
+      description2: 'or small budget',
+      rate: '$20',
+      features: [
+        '1 Landing page design',
+        'With graphics',
+        'Wireframes, Prototype',
+        'Responsive design',
+        'Include source file',
+        'Any graphic design project',
+        'Work in business days, no weekend.',
+        'Support 6 months',
+        'Time to time update',
+      ],
+    },
+    {
+      type: 'PREMIUM',
+      description: 'Need to redesign?',
+      description2: 'Leave it for me',
+      rate: '$60',
+      features: [
+        'Design from scratch',
+        '10/12 Standard Mobile Screens Design with Source file, PNG, JPEG',
+        'Research, user flow, Wireframes, Prototype, Visual design, App testing',
+        'Website/App with graphics and content',
+        'Design System',
+        'Responsive design',
+        'Work with both weekend',
+        'Support 6 months',
+        'Time to time update',
+      ],
+    },
+  ];
+
+  return (
+    <div className='container' id='about'>
+      <div className='row w-100 justify-content-start'>
+        <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
+          <div>
+            <div className=''>
+              <h1 className='font48 mb-5'>Hourly <span className='colorText'>Pricing</span></h1>
             </div>
-        </>
-    );
+          </div>
+          <div className='d-flex justify-content-between align-items-center flex-wrap gap-3'>
+            {pricingOptions.map((option, index) => (
+              <div key={index} className='hourlyWidth'>
+                <div className='d-flex justify-content-between align-items-center flex-wrap'>
+                  <p className='font18White'>{option.type}</p>
+                  <p className='font13White text-end'>{option.description} <br /> {option.description2} </p>
+                </div>
+                <div style={{ borderBottom: "1px solid #555" }}>
+                  <p className='font48 colorText'>{option.rate}<span className='font14c999'> / HOUR</span></p>
+                </div>
+                <div className='pt-5'>
+                  {option.features.map((feature, i) => (
+                    <p key={i} className='font14White mb-3'>
+                      <FontAwesomeIcon icon={faHandPointRight} className='me-3' />
+                      {feature}
+                    </p>
+                  ))}
+                </div>
+                <div className='BookingButton'>
+                  <div className='d-flex justify-content-center gap-3'>
+                    <div className='weekly'>
+                      <p className='font12White'>20+ Hrs <br /> <span className='font16'>WEEKLY</span></p>
+                    </div>
+                    <div className='monthly'>
+                      <p className='font12White'>80+ Hrs <br /> <span className='font16'>MONTHLY</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className='p-xxl-5 p-xl-5 p-lg-5 p-md-5 p-sm-0'>
+            <p className='font16 pe-2'>
+              Hey there! If you're thinking about bringing me on board every month, I'd be more than happy to chat with you and see how we can work together. Just drop me a line at <span className='colorText'>iren@visualsage.xyz</span> Can't wait to hear from you!
+            </p>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default HourlyBooking;

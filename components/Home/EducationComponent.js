@@ -9,7 +9,7 @@ const EducationComponent = () => {
 
     return (
         <>
-            <div className='container educationHeight alignCenter' id='resume'>
+            <div className='container' id='resume'>
                 <div className='row w-100 justify-content-start'>
                     <div className='col-xxl-6 col-xl-6 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
                         <div className=''>
@@ -18,16 +18,6 @@ const EducationComponent = () => {
                             </div>
                             <div className=''>
                                 <TimeLine  />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className='container certificateHeight alignCenter'>
-                <div className='row w-100'>
-                    <div className='col-xxl-6 col-xl-6 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
-                        <div className=''>
-                            <div className=''>
                                 <CertificateCompo  />
                             </div>
                         </div>

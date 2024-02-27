@@ -5,7 +5,7 @@ html, body {
   background: #191919;
 }
 :root {
-  --swiper-theme-color: #fff !important; /* Change this to your desired color */
+  --swiper-theme-color: #fff !important;
 }
 a {
   text-decoration: none;
@@ -28,45 +28,6 @@ ul, li {
   border: 2px solid #242424;
   border-radius: 10px;
 }
-.compoHeightLarge {
-  min-height: 950px;
-}
-.aboutHeight {
-  min-height: 705px;
-}
-.certificateHeight {
-  min-height: 725px;
-}
-.educationHeight {
-  min-height: 1450px;
-}
-.serviceHeight {
-  min-height: 1020px;
-}
-.skillsHeight {
-  min-height: 960px;
-}
-.portfolioHeight {
-  min-height: 1310px;
-}
-.hourlyHeight {
-  min-height: 1090px;
-}
-.testimonialHeight {
-  min-height: 750px;
-}
-.calendlyHeight {
-  min-height: 750px;
-}
-.teamHeight {
-  min-height: 1475px;
-}
-.contactHeight {
-  min-height: 900px;
-}
-.footerHeight {
-  min-height: 900px;
-}
 .alignCenter {
   display: flex;
   align-items: center;
@@ -74,9 +35,6 @@ ul, li {
 .introSubWidth {
   max-width: 526px;
 }
-/* .counterWidth {
-  width: 50%;
-} */
 .hourlyWidth {
   width: 48%;
   min-height: 699px;
@@ -84,26 +42,57 @@ ul, li {
   border-radius: 30px;
   padding: 35px;
   margin-bottom: 30px;
+  position: relative;
+}
+.BookingButton {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+}
+.weekly {
+  width: 140px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #661CB0;
+  border-radius: 60px;
+}
+.weekly:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  transition: 1s ease-in-out;
+}
+.monthly {
+  width: 140px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  border: 1px solid white;
+}
+.monthly:hover {
+  border: none;
+  background-color: #661CB0;
+  transition: 1s ease-in-out;
 }
 .profile {
   width: 30%;
   height: 100%;
   overflow-y: auto;
-  transition: top 0.3s; /* Optional: Add a smooth transition effect */
+  transition: top 0.3s;
 }
 .profileImage {
   border-radius: 100% !important;
 }
-/* .fixed-top  {
-  right: 10% !important;
-  left: 3% !important;
-} */
 .iconWidth {
   width: 75%;
 }
 .fixed {
   position: fixed;
-  top: 15%;
+  top: 11%;
 }
 .loading-container {
   display: flex;
@@ -159,14 +148,14 @@ ul, li {
   font-size: 78px;
   font-style: normal;
   font-weight: 300;
-  line-height: 90px; /* 115.385% */
+  line-height: 90px;
   letter-spacing: -0.2px;
 }
 .font72 {
   font-size: 72px;
   font-style: normal;
   font-weight: 700;
-  line-height: 56px; /* 77.778% */
+  line-height: 56px;
   letter-spacing: -0.2px;
 }
 .font48 {
@@ -198,13 +187,6 @@ ul, li {
   font-weight: 300;
   line-height: 28.8px;
 }
-/* .font24c999 {
-  color: #999;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 28.8px;
-} */
 .locationFont {
   color: #FFF;
   font-size: 24px;
@@ -238,14 +220,20 @@ ul, li {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 27.2px; /* 170% */
+  line-height: 27.2px;
 }
 .font16c999 {
   color: #999;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 27.2px; /* 170% */
+  line-height: 27.2px;
+}
+.font14White {
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
 }
 .designationFont {
   color: #FFF;
@@ -271,27 +259,27 @@ ul, li {
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 170% */
+  line-height: 20px;
 }
 .font12White {
   color: #FFF;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20.4px; /* 170% */
+  line-height: 20.4px;
 }
 .sectionTitleFont {
   color: #FFF;
   font-size: 12px;
   font-style: normal;
   font-weight: 300;
-  line-height: 14.4px; /* 120% */
+  line-height: 14.4px;
   text-transform: uppercase;
   padding: 0 0 0 5px;
-  /* padding: 9.3px 20.692px 10.7px 21px; */
-  /* border-radius: 30px;
+  padding: 13px 21px 10px 21px;
+  border-radius: 30px;
   border: 1px solid #565656;
-  opacity: 0.8531; */
+  opacity: 0.8531;
 }
 .protfolioText {
   font-size: 24px;
@@ -437,7 +425,7 @@ ul, li {
 /* styles.css */
 .timeline-container {
   position: relative;
-  margin-left: 0px; /* Adjust the left margin based on your design */
+  margin-left: 0px;
 }
 
 /* .timeline-event {
@@ -454,11 +442,11 @@ ul, li {
 .timeline-date {
   font-size: 14px;
   font-weight: bold;
-  color: #333; /* Adjust the color of the date */
+  color: #333;
 }
 
 .timeline-content {
-  margin-left: 20px; /* Adjust the left margin for the event content */
+  margin-left: 20px;
 }
 
 /* Additional styling for better visuals */
@@ -490,7 +478,7 @@ ul, li {
   flex-direction: column;
 }
 .profilePhoto {
-  background: white;
+  background: #200639;
   border-radius: 30px;
   display: flex;
   width: 298px;
@@ -503,7 +491,7 @@ ul, li {
   font-size: 18px;
   border: 1px solid #999;
   border-radius: 40%;
-  padding: 14px;
+  padding: 10px;
 }
 .socialIcon:hover {
   background-color: #671cb0;
@@ -555,19 +543,19 @@ ul, li {
 .progress-event:before {
   content: '';
   position: absolute;
-  top: 0px;
+  top: -3px;
   left: 0px;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background: #661CB0;
   border-radius: 50%;
 }
 .progress-event-after {
   content: '';
   position: absolute;
-  top: 0px;
-  width: 10px;
-  height: 10px;
+  top: -3px;
+  width: 15px;
+  height: 15px;
   background: #661CB0;
   border-radius: 50%;
 }
@@ -580,13 +568,9 @@ ul, li {
   font-size: 30px;
   font-weight: 300;
   line-height: 36px;
-  /* position: absolute;
-  width: 10%;
-  height: 10%; */
   color: #FD683B;
   align-items: center;
   justify-content: center;
-   /* Use the same duration as animationDuration in JavaScript */
 }
 
 @keyframes borderMove {
@@ -636,7 +620,7 @@ ul, li {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20.4px; /* 170% */
+  line-height: 20.4px;
 }
 .form-control {
   background: transparent;
@@ -688,10 +672,6 @@ ul, li {
   width: 80%;
   margin: 0px auto 50px;
 }
-/* .footerVideo {
-  width: 50%;
-  min-height: 400px;
-} */
 .videoIntro {
   width: 100%;
   height: 320px;
@@ -717,8 +697,13 @@ ul, li {
     width: 35%;
   }
   .introFontTitle {
-    font-size: 58px;
+    font-size: 52px;
+    line-height: 70px;
   }
+  .font72 {
+    font-size: 40px;
+    line-height: 30px;
+  } 
   .font48 {
     font-size: 40px;
   }
@@ -735,9 +720,6 @@ ul, li {
   .hourlyWidth {
     padding: 15px;
   }
-  /* .counterWidth {
-    width: 50%;
-  } */
   .iconWidth {
     width: 35%;
   }
@@ -745,7 +727,12 @@ ul, li {
     border-radius: 30px;
     border: 2px solid #565656;
   }
-  
+  .subsItems {
+    margin-top: -50px;
+  }
+  .skillWidth {
+    width: 40%;
+  }
 }
 
 /* Medium devices (laptops, desktops) */
@@ -757,7 +744,7 @@ ul, li {
     width: 100%;
   }
   .introFontTitle  {
-    font-size: 75px;
+    font-size: 66px;
   }
   .fixed {
     position: static;
@@ -766,18 +753,24 @@ ul, li {
     margin-bottom: 25px;
     width: 60%;
   }
+  .profile {
+    margin: 0 auto;
+  }
   .portfolioContentWidth {
     width: 30%;
   }
-  /* .counterWidth {
-    width: 50%;
-  } */
+  .homeFlex {
+    flex-direction: column-reverse;
+  }
   .iconWidth {
     width: 50%;
   }
   .gotoTop {
     bottom: 0;
     right: 0;
+  }
+  .subsItems {
+    margin-top: -80px;
   }
 }
 
@@ -799,16 +792,16 @@ ul, li {
   .footerVideo {
     width: 100%;
   }
-  /* .counterWidth {
-    width: 100%;
-  } */
+  .designationFont {
+    font-size: 10px;
+  }
   .introFontTitle  {
-    font-size: 42px;
-    line-height: 55px;
+    font-size: 38px;
+    line-height: 50px;
   }
   .font72 {
-    font-size: 40px;
-    line-height: 52px;
+    font-size: 32px;
+    line-height: 20px;
   }
   .font48  {
     font-size: 28px;
@@ -821,9 +814,16 @@ ul, li {
   .fixed {
     position: static;
   }
+  .homeFlex {
+    flex-direction: column-reverse;
+  }
   .profile {
     width: 100%;
     margin-bottom: 25px;
+    margin: 0 auto;
+  }
+  .rightBorder {
+    border: 1px solid white;
   }
   .resumeBtn {
     padding: 15px 45px;
@@ -834,11 +834,17 @@ ul, li {
   .skillsBorder  {
     padding: 45px;
   }
+  .skillsBorder {
+    padding: 20px;
+  }
   .portfolioContentWidth {
     width: 100%;
   }
   .hourlyWidth {
     width: 100%;
+  }
+  .skillWidth {
+    width: 45%;
   }
   .teamBorder {
     width: 100%;
@@ -855,5 +861,10 @@ ul, li {
   .gotoTopIcon {
     font-size: 12px;
     padding: 3px 4px;
+  }
+  .subsItems {
+    width: 160px;
+    height: 160px;
+    margin-top: -80px;
   }
 }

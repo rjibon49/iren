@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import HomeComponent from '../components/Home/HomeComponent';
 import AboutComponent from '../components/Home/AboutComponent';
@@ -12,7 +12,21 @@ import ContactComponent from '../components/Home/ContactComponent';
 import CalendlyComponent from '../components/Home/CalendlyComponent';
 import TestimoialComponent from '../components/Home/TestimoialComponent';
 
-export default function Home() {
+const sections = [
+  HomeComponent,
+  AboutComponent,
+  EducationComponent,
+  ServiceComponent,
+  SkillsComponent,
+  PortfolioComponent,
+  HourlyBooking,
+  TeamComponent,
+  TestimoialComponent,
+  CalendlyComponent,
+  ContactComponent,
+];
+
+const Home = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -38,20 +52,14 @@ export default function Home() {
 
   // Render the actual content when not loading
   return (
-    <>
-      <Layout>
-        <HomeComponent />
-        <AboutComponent />
-        <EducationComponent />
-        <ServiceComponent />
-        <SkillsComponent />
-        <PortfolioComponent />
-        <HourlyBooking />
-        <TeamComponent />
-        <TestimoialComponent />
-        <CalendlyComponent />
-        <ContactComponent />
-      </Layout>
-    </>
+    <Layout>
+      {sections.map((Section, index) => (
+        <div key={index} className='mb-5 pb-5'>
+          <Section />
+        </div>
+      ))}
+    </Layout>
   );
-}
+};
+
+export default Home;

@@ -6,12 +6,12 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 const AboutComponent = () => {
     return (
         <>
-            <div className='container aboutHeight alignCenter' id='about'>
+            <div className='container' id='about'>
                 <div className='row w-100 justify-content-start'>
                     <div className='col-xxl-6 col-xl-6 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
                         <div>
-                            <div className='mb-3'>
-                                <span className='sectionTitleFont'><FontAwesomeIcon icon={faUser} className='me-3'/>ABOUT</span>
+                            <div className='mb-5'>
+                                <span className='sectionTitleFont'><FontAwesomeIcon icon={faUser} className='me-3 fs-5'/>ABOUT</span>
                             </div>
                             <div className=''>
                                 <h1 className='font48 mb-4'>Every <span className='font48Color'>exceptional</span> design starts with an even more compelling story.</h1>

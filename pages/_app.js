@@ -1,8 +1,10 @@
+/* eslint-disable @next/next/inline-script-id */
+
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Head from 'next/head';
 import Script from 'next/script';
-import '/public/styles/globals.css'
-// import '/public/styles/global.minify.css'
+import '/public/styles/globals.css';
+import '/public/styles/global.minify.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
@@ -17,6 +19,23 @@ export default function App({ Component, pageProps }) {
     
 },[])
   return <>
+  {/* <!-- Google tag (gtag.js) --> */}
+  <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+            page_path: window.location.pathname,
+          });
+        `}
+      </Script>
+
     <Head>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />

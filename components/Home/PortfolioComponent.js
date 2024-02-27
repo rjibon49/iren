@@ -11,7 +11,7 @@ import Link from 'next/link';
 const PortfolioComponent = () => {
     return (
         <>
-            <div className='container portfolioHeight alignCenter' id='portfolio'>
+            <div className='container' id='portfolio'>
                 <div className='row w-100 justify-content-start'>
                     <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
                         <div>
@@ -48,7 +48,7 @@ const PortfolioComponent = () => {
                                 </div>
                             </div>
                             <div className=''>
-                                <h1 className='protfolioText'>Kindly explore my designs on <Link href="https://dribbble.com/irenaktar"><a><span className='colorText'>Dribbble</span></a></Link> and <Link href="https://www.behance.net/irenaktar2"><a><span className='colorText'>Behance</span></a></Link> for more inspiration.</h1>
+                                <h1 className='protfolioText'>Kindly explore my designs on <Link href="https://dribbble.com/irenaktar"><a target='_blank'><span className='colorText'>Dribbble</span></a></Link> and <Link href="https://www.behance.net/irenaktar2"><a target='_blank'><span className='colorText'>Behance</span></a></Link> for more inspiration.</h1>
                             </div>
                         </div>
                     </div>
