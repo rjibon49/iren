@@ -2,6 +2,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandPointRight } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 
 const HourlyBooking = () => {
@@ -58,7 +59,7 @@ const HourlyBooking = () => {
                   <p className='font18White'>{option.type}</p>
                   <p className='font13White text-end'>{option.description} <br /> {option.description2} </p>
                 </div>
-                <div style={{ borderBottom: "1px solid #555" }}>
+                <div style={{ borderBottom: "1px solid #555" }} className='mt-3'>
                   <p className='font48 colorText'>{option.rate}<span className='font14c999'> / HOUR</span></p>
                 </div>
                 <div className='pt-5'>
@@ -72,10 +73,10 @@ const HourlyBooking = () => {
                 <div className='BookingButton'>
                   <div className='d-flex justify-content-center gap-3'>
                     <div className='weekly'>
-                      <p className='font12White'>20+ Hrs <br /> <span className='font16'>WEEKLY</span></p>
+                      <Link href="https://www.upwork.com/freelancers/~013a1545ed7b7f3fad"><a target='_blank'><p className='font12White'>20+ Hrs <br /> <span className='font16'>WEEKLY</span></p></a></Link>
                     </div>
                     <div className='monthly'>
-                      <p className='font12White'>80+ Hrs <br /> <span className='font16'>MONTHLY</span></p>
+                      <Link href="https://www.upwork.com/freelancers/~013a1545ed7b7f3fad"><a target='_blank'><p className='font12White'>80+ Hrs <br /> <span className='font16'>MONTHLY</span></p></a></Link>
                     </div>
                   </div>
                 </div>

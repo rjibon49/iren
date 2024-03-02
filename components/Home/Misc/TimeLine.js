@@ -76,14 +76,14 @@ const TimeLine = () => {
                     <p className='font16 pb-3 text-white'><FontAwesomeIcon icon={faGraduationCap} className='me-3'/>Education</p>
                     <div className="timeline-event ps-5 py-3 mb-5" data-aos="fade-up">
                         <div className=''>
-                            <p className="font16c999 pb-3 ps-5 ms-5">2022 - 2024</p>
+                            <p className="font16c999 pb-3 ps-5 ms-5">2015 - 2016</p>
                             <div className='d-flex align-items-center pe-5 gap-5 mb-4'>
                                 <div>
                                     <FontAwesomeIcon icon={faAward} className='resumeIcon'/>
                                 </div>
                                 <div>
-                                    <h3 className='font24White pb-2'>Bachelor of Computer Science</h3>
-                                    <p className='font13c999'>University Of The People, USA</p>
+                                    <h3 className='font24White pb-2'>Master’s of English Literature</h3>
+                                    <p className='font13c999'>National University, Bangladesh</p>
                                 </div>
                             </div>
                             <p className="font16c999 pb-3 ps-5 ms-5">2011-2012</p>

@@ -92,7 +92,7 @@ ul, li {
 }
 .fixed {
   position: fixed;
-  top: 11%;
+  top: 12%;
 }
 .loading-container {
   display: flex;
@@ -213,7 +213,6 @@ ul, li {
   font-size: 18px;
   font-style: normal;
   font-weight: 300;
-  line-height: 21.6px;
 }
 .font16 {
   color: #FFF;
@@ -312,6 +311,17 @@ ul, li {
   color: #661CB0;
 }
 
+/* ==================== marquee CSS Style ============================
+====================================================================*/
+
+.marqueInfo {
+  font-size: 56px;
+  font-weight: 700;
+  color: white;
+  border-left: 10px solid #661CB0;
+  padding-left: 25px;
+  margin-left: 50px;
+}
 /* ==================== Button CSS Style ============================
 ====================================================================*/
 .hireButton {
@@ -335,7 +345,7 @@ ul, li {
 .resumeBtn {
   border-radius: 30px;
   border: 1px solid #868686;
-  padding: 15px 100px;
+  padding: 15px 60px;
   color: white;
 }
 .resumeBtn:hover {
@@ -411,12 +421,12 @@ ul, li {
 }
 /*===================== Background Logo Section =========================*/
 .backgroundLogo {
-  background-image: url("/images/content/backgroundLogo.png");
+  background-image: url("/images/content/backgroundLogo.webp");
   background-repeat: no-repeat;
   background-position: left;
 }
 .skillBackground {
-  background-image: url("/images/content/myAdvantage.png");
+  background-image: url("/images/content/myAdvantage.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -512,8 +522,8 @@ ul, li {
   width: 30%;
 }
 .skillImage {
-  max-width: 75% !important;
-  min-width: 75% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
   margin: 0 !important;
 }
 .progress-bar {
@@ -707,9 +717,6 @@ ul, li {
   .font48 {
     font-size: 40px;
   }
-  .resumeBtn {
-    padding: 15px 80px;
-  }
   .portfolioContentWidth {
     width: 46%;
   }
@@ -811,6 +818,9 @@ ul, li {
     font-size: 16px;
     line-height: 24px;
   }
+  .marqueInfo {
+    font-size: 36px;
+  }
   .fixed {
     position: static;
   }
@@ -824,9 +834,6 @@ ul, li {
   }
   .rightBorder {
     border: 1px solid white;
-  }
-  .resumeBtn {
-    padding: 15px 45px;
   }
   .serviceBody  {
     padding: 15px;

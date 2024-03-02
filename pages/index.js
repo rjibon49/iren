@@ -11,6 +11,7 @@ import TeamComponent from '../components/Home/TeamComponent';
 import ContactComponent from '../components/Home/ContactComponent';
 import CalendlyComponent from '../components/Home/CalendlyComponent';
 import TestimoialComponent from '../components/Home/TestimoialComponent';
+import MarqueeItem from '../components/Home/MarqueeItem';
 
 const sections = [
   HomeComponent,
@@ -22,6 +23,7 @@ const sections = [
   HourlyBooking,
   TeamComponent,
   TestimoialComponent,
+  MarqueeItem,
   CalendlyComponent,
   ContactComponent,
 ];

@@ -2,12 +2,12 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
-import mehrab from "../../public/images/content/mehrabHossain.png";
-import jibon from "../../public/images/content/raihanHossain.png";
-import srikanta from "../../public/images/content/srikanto.png";
-import shanto from "../../public/images/content/shantoIslam.png";
-import sohan from "../../public/images/content/sohanTalukdar.png";
-import jahidul from "../../public/images/content/jahidulHasan.png";
+import mehrab from "../../public/images/content/mehrabHossain.webp";
+import jibon from "../../public/images/content/raihanHossain.webp";
+import srikanta from "../../public/images/content/srikanto.webp";
+import shanto from "../../public/images/content/shantoIslam.webp";
+import sohan from "../../public/images/content/sohanTalukdar.webp";
+import jahidul from "../../public/images/content/jahidulHasan.webp";
 
 const teamMembers = [
   { name: 'Mehrab Hossain', role: 'SEO & Digital Mkt', image: mehrab },
