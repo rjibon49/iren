@@ -7,7 +7,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Link from 'next/link';
 import { faCirclePlay } from '@fortawesome/free-regular-svg-icons';
-import { faBehance, faDribbble, faFacebook, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import ReactPlayer from 'react-player'
 import SocialIcons from './Misc/SocialIcons';
 
@@ -157,10 +156,6 @@ const ContactComponent = () => {
                                     <label htmlFor="inputPhone" className="form-label mb-2">PHONE <span className='colorText999'>(optional)</span></label>
                                     <input type="text" autoComplete="off" className="form-control" id="inputPhone" placeholder='Your Phone Number' value={values.number} name="number" onChange={handleChange} />
                                 </div>
-                                {/* <div className="col-md-5 form-group">
-                                    <label htmlFor="inputBudget" className="form-label mb-2">BUDGET <span className='colorText999'>(optional)</span></label>
-                                    <input type="text" className="form-control" id="inputBudget" placeholder='A range budget for your project' value={values.budget} name="budget" onChange={handleChange} />
-                                </div> */}
                                 <div className="col-md-10 messageForm form-group">
                                     <label htmlFor="inutMessage" className="form-label mb-2">MESSAGE</label>
                                     <textarea className="form-control" id="inutMessage" rows="5" value={values.message} name="message" onChange={handleChange}></textarea>
@@ -192,7 +187,7 @@ const ContactComponent = () => {
                                 <p className='font16 footerContent'>Subscribe for Creative Brilliance: Elevate Your User Experience with a Skilled UI/UX Designer!</p>
                                 <div className='d-flex justify-content-evenly flex-wrap'>
                                     <Link href="https://www.youtube.com/@visualsageux"><a><button className='subscribeBtn'><FontAwesomeIcon icon={faCirclePlay} className='me-3'/>Subscribe Me</button></a></Link>
-                                    <Link href="https://www.upwork.com/freelancers/~013a1545ed7b7f3fad"><a><button className='hireButton'>HIRE ME!</button></a></Link>
+                                    <Link href="https://www.fiverr.com/designerirenn"><a><button className='hireButton'>HIRE ME!</button></a></Link>
                                 </div>
                                 <div className='mt-5'>
                                     <ReactPlayer url='https://www.youtube.com/embed/wkhVXxU-H9E?si=Pt1N4iJlvG8WCeeO' width="100%" height="250px" />

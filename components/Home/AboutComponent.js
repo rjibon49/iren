@@ -14,7 +14,7 @@ const AboutComponent = () => {
                                 <span className='sectionTitleFont'><FontAwesomeIcon icon={faUser} className='me-3 fs-5'/>ABOUT</span>
                             </div>
                             <div className=''>
-                                <h1 className='font48 mb-4'>Every <span className='font48Color'>exceptional</span> design starts with an even more compelling story.</h1>
+                                <h2 className='font48 mb-4'>Every <span className='font48Color'>exceptional</span> design starts with an even more compelling story.</h2>
                                 <p className='font16c999 mb-4'>Starting my freelance design adventure almost eight years ago, I began collaborating remotely with agencies, initially specializing as a graphic designer. Over the past two years, I've teamed up with skilled individuals to craft digital products customized for both business and consumer requirements. Fueled by a quiet confidence, innate curiosity, and a steadfast commitment to refining my skills, I methodically approach design challenges one at a time.</p>
                             </div>
                         </div>

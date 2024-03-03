@@ -16,7 +16,7 @@ const CertificateCompo = () => {
         <h6 className='font48'>Certificates & <span className='colorText'>Achievement</span></h6>
       </div>
       <div className="timeline-container">
-        <div className="timeline-event ps-5 py-5 mb-5" data-aos="fade-up">
+        <div className="timeline-event ps-xxl-5 ps-xl-5 ps-lg-4 ps-md-5 py-5 mb-5" data-aos="fade-up">
           <div className=''>
             {certificates.map((certificate, index) => (
               <div key={index} className='d-flex align-items-center pe-5 gap-5 mb-4'>

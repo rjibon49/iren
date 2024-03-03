@@ -34,7 +34,7 @@ const Home = () => {
   useEffect(() => {
     // Simulate a delay (you can replace this with actual data loading logic)
     const loadData = async () => {
-      await new Promise(resolve => setTimeout(resolve, 5000)); // Simulating a 5-second delay
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulating a 1-second delay
       setLoading(false);
     };
 
@@ -46,7 +46,7 @@ const Home = () => {
     return (
       <div className="loading-container">
         <h1 className='nameFont'>Hello from <span className='colorText'>IREN</span></h1>
-        <h1 className='font24White'>I am here to welcome you to my <span className='colorText'>PORTFOLIO</span></h1>
+        <h1 className='font24White'>I am here to welcome you, to my <span className='colorText'>PORTFOLIO</span></h1>
         <div className="spinner-border text-light mt-3" style={{width:"3rem",height:"3rem"}} role="status"> </div>
       </div>
     );

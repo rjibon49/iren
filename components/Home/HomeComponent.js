@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,6 +8,7 @@ import bd from "../../public/images/content/BD.svg";
 import { faArrowDown, faHome } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import SocialIcons from './Misc/SocialIcons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 
 const HomeComponent = () => {
@@ -74,7 +76,8 @@ const HomeComponent = () => {
                                 <span className='sectionTitleFont'><FontAwesomeIcon icon={faHome} className='me-4' />introduction</span>
                             </div> */}
                             <div className=''>
-                                <h1 className='introFontTitle mb-5'><span className='colorText'><b>Greetings</b></span> form <span className='colorTextPurple'><b>Iren</b></span>, <br /> I am a UX Researcher and Designer.</h1>
+                                <p className='introFontTitle'><span className='colorText'><b>Greetings</b></span> form <span className='colorTextPurple'><b>Iren</b></span></p>
+                                <h1 className='introFontTitle'> I am a UX Researcher and Designer.</h1>
                             </div>
                             <div className='d-flex justify-content-between flex-wrap'>
                                 
@@ -128,7 +131,7 @@ const HomeComponent = () => {
                                 </div>
                                 <SocialIcons />
                                 <div className='text-center'>
-                                    <Link href="https://www.fiverr.com/designerirenn"><a target='_blank'><button className='hireButton'>HIRE ME!</button></a></Link>
+                                    <Link href="https://wa.me/message/7IJAV5YUDTD5E1"><a target='_blank'><button className='hireButton'><FontAwesomeIcon icon={faWhatsapp} className='fs-5' /> let's chat!</button></a></Link>
                                 </div>
                             </div>
                         </div>

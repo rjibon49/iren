@@ -49,7 +49,7 @@ const HourlyBooking = () => {
         <div className='col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12'>
           <div>
             <div className=''>
-              <h1 className='font48 mb-5'>Hourly <span className='colorText'>Pricing</span></h1>
+              <h6 className='font48 mb-5'>Hourly <span className='colorText'>Pricing</span></h6>
             </div>
           </div>
           <div className='d-flex justify-content-between align-items-center flex-wrap gap-3'>

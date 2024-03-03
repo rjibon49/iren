@@ -80,7 +80,6 @@ ul, li {
 }
 .profile {
   width: 30%;
-  height: 100%;
   overflow-y: auto;
   transition: top 0.3s;
 }
@@ -93,6 +92,8 @@ ul, li {
 .fixed {
   position: fixed;
   top: 12%;
+  margin-left: 30px;
+  z-index: 888;
 }
 .loading-container {
   display: flex;
@@ -329,13 +330,16 @@ ul, li {
   background: #661CB0;
   padding: 10px 60px;
   color: #FFF;
-  text-align: center;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 27.2px; /* 170% */
+  line-height: 27.2px;
   text-transform: uppercase;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 .hireButton:hover {
   color: var(--Gray-700, #344054);
@@ -391,8 +395,8 @@ ul, li {
 
 .gotoTop {
   position: fixed;
-  bottom: 1%;
-  right: 1%;
+  bottom: 0%;
+  right: 0%;
   background: transparent;
   border: none;
 }
@@ -437,13 +441,6 @@ ul, li {
   position: relative;
   margin-left: 0px;
 }
-
-/* .timeline-event {
-  position: relative;
-  padding: 20px 0px 0px 20px;
-  border-left: 2px solid #333;
-  margin-top: -20px;
-} */
 .timeline-event {
   border: 1px solid #242424;
   border-radius: 20px;
@@ -459,22 +456,6 @@ ul, li {
   margin-left: 20px;
 }
 
-/* Additional styling for better visuals */
-/* .timeline-event:last-child {
-  margin-bottom: 0;
-}
-
-.timeline-event:before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -11px;
-  width: 20px;
-  height: 20px;
-  background: #551C8F;
-  border: 2px solid #333;
-  border-radius: 50%;
-} */
 /*======================= Name Card Section ===========================*/
 
 .leftCard {
@@ -740,6 +721,9 @@ ul, li {
   .skillWidth {
     width: 40%;
   }
+  .gotoTopIcon {
+    display: none;
+  }
 }
 
 /* Medium devices (laptops, desktops) */
@@ -873,5 +857,8 @@ ul, li {
     width: 160px;
     height: 160px;
     margin-top: -80px;
+  }
+  .timeline-event {
+    padding-left: 14px;
   }
 }

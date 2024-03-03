@@ -1,10 +1,11 @@
+/* eslint-disable jsx-a11y/aria-proptypes */
 import Image from 'next/image';
 import React from 'react';
 import logo from "../public/images/logo/visualsage-logo.png";
 import Link from 'next/link';
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { animateScroll as scroll } from 'react-scroll';
 
 const menuItems = [
   { id: '#about', label: 'About' },
@@ -17,29 +18,12 @@ const menuItems = [
 ];
 
 const Header = () => {
-  const scrollTo = (sectionId) => {
-    scroll.scrollTo({sectionId}, {
-      duration: 1000,
-      smooth: true,
-    });
-  };
 
   const scrollToTop = () => {
     scroll.scrollToTop({
       duration: 1000,
       smooth: true,
     });
-  };
-
-  const smoothScroll = (targetId) => {
-    const targetElement = document.getElementById(targetId);
-  
-    if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop - 70, // Adjust the offset based on your layout (navbar height)
-        behavior: 'smooth',
-      });
-    }
   };
 
   return (
@@ -57,25 +41,9 @@ const Header = () => {
               </li>
               {menuItems.map(item => (
                 <li key={item.id} className="nav-item">
-                  {/* <ScrollLink
-                    to={item.id}
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                    className="nav-link"
-                    onClick={() => scrollTo(item.id)}
-                  >
+                  <a href={item.id} className="nav-link">
                     {item.label}
-                    
-                  </ScrollLink> */}
-                  <a
-            href={item.id}
-            className="nav-link"
-            // onClick={() => smoothScroll(item.id)}
-          >
-            {item.label}
-          </a>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -83,7 +51,7 @@ const Header = () => {
         </div>
       </nav>
       <button className="gotoTop" onClick={scrollToTop}>
-        <FontAwesomeIcon icon={faArrowUp} className='gotoTopIcon' />
+        <FontAwesomeIcon icon={faArrowUp} aria-level="upArrow icon" className='gotoTopIcon' />
       </button>
     </div>
   );

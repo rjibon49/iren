@@ -4,7 +4,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import Head from 'next/head';
 import Script from 'next/script';
 import '/public/styles/globals.css';
-import '/public/styles/global.minify.css';
+// import '/public/styles/global.minify.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
@@ -48,8 +48,6 @@ export default function App({ Component, pageProps }) {
     <Script
       id="bootstrap-cdn"
 src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" />
-  <Script src="https://kit.fontawesome.com/a54f1db03d.js" crossOrigin="anonymous" />
-  <Script src="https://unpkg.com/aos@2.3.1/dist/aos.js" />
     <Component {...pageProps} />
   </>
 }

@@ -12,12 +12,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const portfolioData = [
-    { title: 'NFT Website Design', link: "https://dribbble.com/irenaktar", image: nft },
-    { title: 'Travel Agency Website Design', link: "https://dribbble.com/irenaktar", image: travelAgency },
-    { title: 'Real Estate Website Design', link: "https://dribbble.com/irenaktar", image: realEstate1 },
-    { title: 'Real Estate Website Design', link: "https://dribbble.com/irenaktar", image: realEstate },
-    { title: 'Beauty Salon Website Design', link: "https://dribbble.com/irenaktar", image: beutySalon },
-    { title: 'Traveling Website Design', link: "https://dribbble.com/irenaktar", image: traveling },
+    { title: 'NFT Website', link: "https://dribbble.com/irenaktar", image: nft },
+    { title: 'Travel Agency', link: "https://dribbble.com/irenaktar", image: travelAgency },
+    { title: 'Real Estate', link: "https://dribbble.com/irenaktar", image: realEstate1 },
+    { title: 'RealEstate Website', link: "https://dribbble.com/irenaktar", image: realEstate },
+    { title: 'Beauty Salon', link: "https://dribbble.com/irenaktar", image: beutySalon },
+    { title: 'Traveling Design', link: "https://dribbble.com/irenaktar", image: traveling },
   ];
 
 const PortfolioComponent = () => {
