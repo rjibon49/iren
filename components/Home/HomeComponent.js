@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/aria-proptypes */
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
@@ -89,7 +90,7 @@ const HomeComponent = () => {
                                 </div>
                                 <div className='subsContainer ms-auto'>
                                     <div className='subsItems'>
-                                        <Link href="https://www.youtube.com/@visualsageux"><a className='SubsIcon' target='_blank'><FontAwesomeIcon icon={faArrowDown} className='arrowIcon' /></a></Link>
+                                        <Link href="https://www.youtube.com/@visualsageux"><a className='SubsIcon' target='_blank ' aria-level="downArrow icon"><FontAwesomeIcon icon={faArrowDown} className='arrowIcon' /></a></Link>
                                         <Image src={subs} alt='SubscribeMe Button' className='subsImage' />
                                     </div>
                                 </div>
@@ -123,10 +124,10 @@ const HomeComponent = () => {
                                     <Image src={photo} alt='Iren Akter Rone' className='profileImage' />
                                 </div>
                                 <div className='text-center mb-5'>
-                                    <a href='mailto:"iren@visualsage.xyz'> <h3 className='font24White'>iren@visualsage.xyz</h3></a>
+                                    <a href='mailto:"iren@visualsage.xyz'> <p className='font24White'>iren@visualsage.xyz</p></a>
                                     <div className='d-flex justify-content-center align-items-center gap-2'>
                                         <Image src={bd} alt='Bangladesh Flag' className='' />
-                                        <h4 className='font18White mt-2'>Bangladesh</h4>
+                                        <p className='font18White mt-2'>Bangladesh</p>
                                     </div>
                                 </div>
                                 <SocialIcons />

@@ -39,7 +39,7 @@ const TeamComponent = () => {
                   <div className='teamImageBody'>
                     <div className='text-center'>
                       <Image src={member.image} alt={member.name} className='memberImage' />
-                      <h4 className='font20E6'>{member.name}</h4>
+                      <p className='font20E6'>{member.name}</p>
                       <p className='designationFont'>{member.role}</p>
                     </div>
                   </div>

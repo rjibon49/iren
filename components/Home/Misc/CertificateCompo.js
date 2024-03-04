@@ -13,7 +13,7 @@ const CertificateCompo = () => {
   return (
     <div className=''>
       <div className='pb-5'>
-        <h6 className='font48'>Certificates & <span className='colorText'>Achievement</span></h6>
+        <p className='font48'>Certificates & <span className='colorText'>Achievement</span></p>
       </div>
       <div className="timeline-container">
         <div className="timeline-event ps-xxl-5 ps-xl-5 ps-lg-4 ps-md-5 py-5 mb-5" data-aos="fade-up">

@@ -7,10 +7,24 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Link from 'next/link';
 import { faCirclePlay } from '@fortawesome/free-regular-svg-icons';
-import ReactPlayer from 'react-player'
+import YouTube from 'react-youtube';
 import SocialIcons from './Misc/SocialIcons';
 
 const ContactComponent = () => {
+
+    const videoOpts = {
+        height: '280',
+        width: '100%',
+        playerVars: {
+          autoplay: 0, // set to 1 if you want it to autoplay
+          controls: 0,
+          disablekb: 1,
+          iv_load_policy: 3,
+          modestbranding: 1,
+          showinfo: 0,
+        },
+      };
+
     const initialValues = {
         name: "",
         email: "",
@@ -189,8 +203,19 @@ const ContactComponent = () => {
                                     <Link href="https://www.youtube.com/@visualsageux"><a><button className='subscribeBtn'><FontAwesomeIcon icon={faCirclePlay} className='me-3'/>Subscribe Me</button></a></Link>
                                     <Link href="https://www.fiverr.com/designerirenn"><a><button className='hireButton'>HIRE ME!</button></a></Link>
                                 </div>
-                                <div className='mt-5'>
+                                {/* <div className='mt-5'>
                                     <ReactPlayer url='https://www.youtube.com/embed/wkhVXxU-H9E?si=Pt1N4iJlvG8WCeeO' width="100%" height="250px" />
+                                </div> */}
+                                {/* <div className='mt-5 text-center'>
+                                    <iframe width="100%" height="280" loading='lazy' src="https://www.youtube.com/embed/wkhVXxU-H9E?si=Z0X1FsSqFkFvIZpB&amp;controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                                </div> */}
+                                <div className='mt-5'>
+                                    <YouTube
+                                        videoId="wkhVXxU-H9E"
+                                        opts={videoOpts}
+                                        className="youtube-video"
+                                        sandbox="allow-scripts"
+                                    />
                                 </div>
                             </div>
                         </div>

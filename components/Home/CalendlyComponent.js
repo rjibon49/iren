@@ -1,8 +1,20 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import { InlineWidget } from "react-calendly";
+import React, { useEffect } from 'react';
 
 const CalendlyComponent = () => {
+    useEffect(() => {
+        // Load Calendly script asynchronously
+        const script = document.createElement('script');
+        script.src = 'https://calendly.com/assets/external/widget.js';
+        script.async = true;
+        document.body.appendChild(script);
+
+        // Cleanup
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, []);
+
     return (
         <>
             <div className='container' id='meeting'>
@@ -13,7 +25,8 @@ const CalendlyComponent = () => {
                         </div>
                         <div className=''>
                             <div className="mettongContent">
-                                <InlineWidget  url="https://calendly.com/irenaktar/let-s-have-a-coffee-session" styles={{height:"700px"}} />
+                                {/* Embed Calendly Inline Widget */}
+                                <div className="calendly-inline-widget" data-url="https://calendly.com/irenaktar/let-s-have-a-coffee-session" style={{ minWidth: '320px', height: '810px' }}></div>
                             </div>
                         </div>
                     </div>

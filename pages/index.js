@@ -34,7 +34,7 @@ const Home = () => {
   useEffect(() => {
     // Simulate a delay (you can replace this with actual data loading logic)
     const loadData = async () => {
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulating a 1-second delay
+      await new Promise(resolve => setTimeout(resolve, 500)); // Simulating a 1-second delay
       setLoading(false);
     };
 

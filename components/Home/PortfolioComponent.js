@@ -12,12 +12,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const portfolioData = [
-    { title: 'NFT Website', link: "https://dribbble.com/irenaktar", image: nft },
-    { title: 'Travel Agency', link: "https://dribbble.com/irenaktar", image: travelAgency },
-    { title: 'Real Estate', link: "https://dribbble.com/irenaktar", image: realEstate1 },
-    { title: 'RealEstate Website', link: "https://dribbble.com/irenaktar", image: realEstate },
-    { title: 'Beauty Salon', link: "https://dribbble.com/irenaktar", image: beutySalon },
-    { title: 'Traveling Design', link: "https://dribbble.com/irenaktar", image: traveling },
+    { title: 'NFT Website Design', link: "https://dribbble.com/irenaktar", image: nft },
+    { title: 'Travel Agency Website Design', link: "https://dribbble.com/irenaktar", image: travelAgency },
+    { title: 'Real Estate light version website Design', link: "https://dribbble.com/irenaktar", image: realEstate1 },
+    { title: 'Real Estate Dark Version Website', link: "https://dribbble.com/irenaktar", image: realEstate },
+    { title: 'Beauty Salon Website Design', link: "https://dribbble.com/irenaktar", image: beutySalon },
+    { title: 'Traveling Website Design', link: "https://dribbble.com/irenaktar", image: traveling },
   ];
 
 const PortfolioComponent = () => {
@@ -35,8 +35,8 @@ const PortfolioComponent = () => {
                             </div>
                             <div>
                                 <Link href="https://dribbble.com/irenaktar" ><a target="_blank">
-                                    <Image src={cafeCrave} alt='Cafe Crave Coffee Shop Case Study' className='portfolioImage' quality={80} />
-                                    <h3 className='font24White mt-3'>CafeCrave Coffeeshop Case Study</h3>
+                                    <Image src={cafeCrave} alt='Cafe Crave Coffee Shop Case Study' className='portfolioImage' quality={80} loading="lazy" />
+                                    <p className='font24White mt-3'>CafeCrave Coffeeshop Case Study</p>
                                 </a></Link>
                             </div>
 
@@ -45,7 +45,7 @@ const PortfolioComponent = () => {
                                     <div className='portfolioContentWidth my-2' key={index}>
                                         <Link href={portfolio.link}>
                                             <a target="_blank">
-                                                <Image src={portfolio.image} alt={portfolio.title} className='portfolioImage' />
+                                                <Image src={portfolio.image} alt={portfolio.title} className='portfolioImage' loading="lazy" />
                                                 <h3 className='font20White mt-3'>{portfolio.title}</h3>
                                             </a>
                                         </Link>  
@@ -53,7 +53,7 @@ const PortfolioComponent = () => {
                                 ))}
                             </div>
                             <div className='col-xxl-10'>
-                                <h5 className='colorText fs-4'>Kindly explore my designs on <Link href="https://dribbble.com/irenaktar"><a target='_blank'><span className='protfolioText'>Dribbble</span></a></Link> and <Link href="https://www.behance.net/irenaktar2"><a target='_blank'><span className='protfolioText'>Behance</span></a></Link> for more inspiration.</h5>
+                                <p className='colorText fs-4'>Kindly explore my designs on <Link href="https://dribbble.com/irenaktar"><a target='_blank'><span className='protfolioText'>Dribbble</span></a></Link> and <Link href="https://www.behance.net/irenaktar2"><a target='_blank'><span className='protfolioText'>Behance</span></a></Link> for more inspiration.</p>
                             </div>
                         </div>
                     </div>

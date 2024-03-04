@@ -7,7 +7,7 @@ const TimeLine = () => {
         <>
             <div className=''>
                 <div className='pb-5'>
-                    <h6 className='font48'>Education & <span className='colorText'>Experience</span></h6>
+                    <p className='font48'>Education & <span className='colorText'>Experience</span></p>
                 </div>
                 <div className="timeline-container">
                     <p className='font16 pb-3 text-white'><FontAwesomeIcon icon={faUserCheck} className='me-3'/>Experience</p>

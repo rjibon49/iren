@@ -1,4 +1,6 @@
 /* eslint-disable jsx-a11y/aria-proptypes */
+/* eslint-disable jsx-a11y/role-supports-aria-props */
+
 import Image from 'next/image';
 import React from 'react';
 import logo from "../public/images/logo/visualsage-logo.png";
@@ -50,8 +52,8 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <button className="gotoTop" onClick={scrollToTop}>
-        <FontAwesomeIcon icon={faArrowUp} aria-level="upArrow icon" className='gotoTopIcon' />
+      <button className="gotoTop" onClick={scrollToTop} aria-level="upArrow icon">
+        <FontAwesomeIcon icon={faArrowUp} className='gotoTopIcon' />
       </button>
     </div>
   );
