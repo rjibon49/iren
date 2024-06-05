@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const skillsData = [
   { label: 'Figma', imageSrc: '/images/icon/figma.png', percentage: 95, progress: 90 },
-  { label: 'blander', imageSrc: '/images/icon/blander.png', percentage: 85, progress: 80 },
+  { label: 'Framer', imageSrc: '/images/icon/framer.png', percentage: 85, progress: 80 },
   { label: 'Photoshop', imageSrc: '/images/icon/adobePhotshop.png', percentage: 90, progress: 85 },
   { label: 'Illustrator', imageSrc: '/images/icon/adobeIllustrator.png', percentage: 90, progress: 85 },
   { label: 'After Effects', imageSrc: '/images/icon/adobeAfterEffect.png', percentage: 80, progress: 75 },

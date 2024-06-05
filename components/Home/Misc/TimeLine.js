@@ -28,7 +28,7 @@ const TimeLine = () => {
                                     <FontAwesomeIcon icon={faBriefcase} className='resumeIcon'/>
                                 </div>
                                 <div>
-                                    <h3 className='font24White pb-2'>Graphics & UX Designer (Remotely) </h3>
+                                    <h3 className='font24White pb-2'>Graphics & UX Designer (Freelance) </h3>
                                     <p className='font13c999'>Upwork (2021, Dec - Present) </p>
                                 </div>
                             </div>
